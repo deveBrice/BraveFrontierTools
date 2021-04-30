@@ -11,6 +11,7 @@ export class AdvancedSearchComponent implements OnInit {
   @Input() advancedSearch$: Observable<Array<IUnitsList>>;
   @Output() searchByLevel$ = new EventEmitter<Observable<Array<any>>>();
   @Input() newResultSearch$: Observable<Array<any>>;
+  @Output() filterByElementsUpdate = new EventEmitter<Observable<Array<any>>>();
 
   constructor() { }
 
@@ -20,5 +21,9 @@ export class AdvancedSearchComponent implements OnInit {
   levelSearchResultEvent($event: Observable<Array<any>>) {
     this.searchByLevel$.emit($event);
   }
+
+  filterByElementsEvent = ($event) => {
+    this.filterByElementsUpdate.emit($event)
+  } 
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { newArray } from '@angular/compiler/src/util';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -6,13 +7,16 @@ import { Observable } from 'rxjs';
   templateUrl: './level-search.component.html',
   styleUrls: ['./level-search.component.scss']
 })
-export class LevelSearchComponent implements OnInit, OnChanges {
+
+export class LevelSearchComponent implements OnInit {
 
   @Input() levelsearch$: Observable<Array<any>>;
-  @Output() levelSearchResult$ = new EventEmitter<any[]>();
+  @Output() levelSearchResult$ = new EventEmitter<any>();
   @Input() newSearch$: Observable<Array<any>>;
-
+  updateArray = [];
   levelListResult: any[] = []
+  checkedLevel: boolean;
+  filterName: string;
 
   constructor() { }
 
@@ -20,16 +24,12 @@ export class LevelSearchComponent implements OnInit, OnChanges {
   
   }
 
-  ngOnChanges(simpleChanges: SimpleChanges) {
-
-  }
-
   levelList: any[] = [
     {name: '1 étoile', state: false, icon: "★"},
-    {name: '2 étoiles', state: true, icon: "★★"},
-    {name: '3 étoiles', state: true, icon: "★★★"},
-    {name: '4 étoiles', state: true, icon: "★★★★"},
-    {name: '5 étoiles', state: true, icon: "★★★★★"},
+    {name: '2 étoiles', state: false, icon: "★★"},
+    {name: '3 étoiles', state: false, icon: "★★★"},
+    {name: '4 étoiles', state: false, icon: "★★★★"},
+    {name: '5 étoiles', state: false, icon: "★★★★★"},
     {name: '6 étoiles', state: false, icon: "★★★★★★"},
     {name: '7 étoiles', state: false, icon: "★★★★★★★"},
     {name: 'Omni', state: false, icon: "★★★★★★★★"}
@@ -38,8 +38,7 @@ export class LevelSearchComponent implements OnInit, OnChanges {
   displayLevelList(): any[] {
     return this.levelList;
   }
- 
-  //change the state of filter by level current 
+
   selectedLevel(level: any) {
      level.state = !level.state;
    
@@ -48,14 +47,14 @@ export class LevelSearchComponent implements OnInit, OnChanges {
       if(levelChange.state === true) {
         
          levels.push(levelChange.icon)
-
-        this.levelListResult = levels
-        this.levelSearchResult$.emit(levels)
-     
+         
+         this.levelListResult = levels
+   
       }  
       return levels
     }, [])
 
+    this.levelSearchResult$.emit({type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult})
     this.checkeStateLevel(this.levelList);
   }
 
@@ -66,16 +65,7 @@ export class LevelSearchComponent implements OnInit, OnChanges {
     let checkerResult = checker(arrayList)
   
     if(checkerResult === true) {
-
-      return this.levelSearchResult$.emit([])
+      return this.levelSearchResult$.emit({type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []})
     }
   }
-
-/*  filterByLevel(levelList: any[]) {
-    if(this.newSearch$ !== undefined) {
-    }
-    const levelsearch$: Observable<Array<IUnitsList>> = this.levelsearch$.pipe(
-      map(levelsearch => levelsearch.filter((res) => levelList.includes(res.level)))
-    )
-  }*/
 }
