@@ -1,30 +1,30 @@
 <div class="">
     <div class="">
-        <h1 class="text-white !m-0 pl-3 pt-3 pb-2">Niveau</h1>
+        <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Niveaux</h2>
         <mat-divider class="bg-white"></mat-divider>
     </div>
     <div class="mt-4">
         <ng-template ngFor let-level [ngForOf]="displayLevelList()">
             <div class="flex items-center">
-                <div class="pr-2 ml-4">
-                    <button class="focus:outline-none" mat-icon-button (click)="selectedLevel(level)">
+                <div class="ml-4">
+                    <button class="focus:outline-none" mat-icon-button (click)="selectedLevel(level)" id="test">
                         <mat-icon
                                 *ngIf="level.state === true"
                                 aria-label="Example icon-button with a heart icon"
-                                class="text-stars">
+                                class="text-stars" id="star">
                                 star
                         </mat-icon>
                             
                         <mat-icon
                                 *ngIf="level.state === false"
                                 aria-label="Example icon-button with a heart icon"
-                                class="text-stars text-3xl !h-8 !w-8 pt-1">
+                                class="text-stars !h-8 !w-8 pt-1" id="star_border">
                                 star_border
                         </mat-icon>
                     </button>
                </div>
                  <div class="">
-                   <p class="text-white !mb-0 text-xl">{{level.name}}</p>
+                   <p class="text-white !mb-0 text-lg">{{level.name}}</p>
                  </div>
             </div>
         </ng-template>

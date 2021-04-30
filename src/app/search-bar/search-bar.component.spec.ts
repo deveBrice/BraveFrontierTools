@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SearchBarComponent } from './search-bar.component';
 
-fdescribe('SearchBarComponent', () => {
+describe('SearchBarComponent', () => {
     let component: SearchBarComponent;
     let fixture: ComponentFixture<SearchBarComponent>;
     

@@ -44,8 +44,30 @@ module.exports = {
           '402': '100.5rem',
           '480': '100rem',
           '1000': '250rem',
-        }
+        },
+
+        backgroundImage: {
+          'fire-picture': "url('assets/imgs/unitsList/elements/fire.png')",
+          'water-picture': "url('assets/imgs/unitsList/elements/water.png')",
+          'earth-picture': "url('assets/imgs/unitsList/elements/earth.png')",
+          'lightning-picture': "url('assets/imgs/unitsList/elements/lightning.png')",
+          'light-picture': "url('assets/imgs/unitsList/elements/light.png')",
+          'dark-picture': "url('assets/imgs/unitsList/elements/dark.png')",
+        },
       },
+
+      borderRadius: {
+      'none': '0',
+       'sm': '0.125rem',
+       DEFAULT: '0.25rem',
+       DEFAULT: '4px',
+       'md': '0.375rem',
+       'lg': '0.5rem',
+       'xl': '0.75rem',
+       '2xl': '1rem',
+       'full': '9999px',
+       'large': '12px',
+      }
     },
     variants: {
       extend: {
@@ -53,6 +75,9 @@ module.exports = {
         margin: ['responsive', 'important'],
         height: ['responsive', 'important'],
         width: ['responsive', 'important'],
+        borderRadius: ['hover', 'focus', 'important'],
+        backgroundImage: ['hover', 'focus', 'important'],
+        display: ['hover', 'focus'],
       },
     },
     plugins: [

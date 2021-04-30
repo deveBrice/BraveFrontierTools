@@ -2,6 +2,7 @@ import { IAnimationBattle } from  './iAnimationBattle.interface';
 import { IFields } from './IFields.interface';
 import { IBaseStats } from './iBaseStats.interface';
 import { IChainsEvolves } from './IChainsEvolves.interface';
+import { IElements } from './IElements.interface';
 
 export interface IUnitsList {
   id: number;
@@ -9,7 +10,7 @@ export interface IUnitsList {
   level: string;
   numUnit: number;
   gender: Object;
-  element: Object;
+  element: IElements;
   color: string;
   evolveFamily: string;
   unit: Object;

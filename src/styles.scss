@@ -46,9 +46,109 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
+.checkbox-custom .mat-checkbox-inner-container {
+   @apply ml-2 mb-2.5 ;
+}
 
 
+.checkbox-custom {
+  & .mat-checkbox-background, .mat-checkbox-frame {
+      @apply h-6 w-6 rounded-full; 
+  }
+}
+
+.checkbox-custom .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-transparent;
+}
+
+.checkbox-custom .mat-checkbox-ripple {
+  position: absolute;
+  left: calc(50% - 17px) !important;
+  top: calc(50% - 17px) !important;
+}
+
+.checkbox-custom-fire .mat-checkbox-frame { 
+  @apply border-fireColor;
+}
+
+.checkbox-custom-fire .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-fire-picture;
+}
+
+.checkbox-custom-fire .mat-ripple-element {
+  @apply bg-fireColor #{!important};  
+}
 
 
+.checkbox-custom-water .mat-checkbox-frame { 
+  @apply border-waterColor;
+}
+
+.checkbox-custom-water .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-water-picture;
+}
+
+.checkbox-custom-water .mat-ripple-element {
+  @apply bg-waterColor #{!important}; 
+}
+
+
+.checkbox-custom-earth .mat-checkbox-frame { 
+  @apply border-earthColor;
+}
+
+.checkbox-custom-earth .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-earth-picture;
+}
+
+.checkbox-custom-earth .mat-ripple-element {
+  @apply bg-earthColor #{!important}; 
+}
+
+
+.checkbox-custom-lightning .mat-checkbox-frame { 
+  @apply border-lightningColor;
+}
+
+.checkbox-custom-lightning .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-lightning-picture;
+}
+
+.checkbox-custom-lightning .mat-ripple-element {
+  @apply bg-lightningColor #{!important}; 
+}
+
+
+.checkbox-custom-light .mat-checkbox-frame { 
+  @apply border-lightColor
+}
+
+.checkbox-custom-light .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-light-picture;
+}
+
+.checkbox-custom-light .mat-ripple-element {
+  @apply bg-lightColor #{!important}; 
+}
+
+
+.checkbox-custom-dark .mat-checkbox-frame { 
+  @apply border-darkColor
+}
+
+.checkbox-custom-dark .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-dark-picture;
+}
+
+.checkbox-custom-dark .mat-ripple-element {
+  @apply bg-darkColor #{!important}; 
+}
 
 

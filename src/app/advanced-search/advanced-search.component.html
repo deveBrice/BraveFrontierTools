@@ -1,5 +1,8 @@
 <div class="h-full w-64 rounded-2xl ml-2 mt-2 mr-5 bg-blackCardUnit">
-    <div class="h-auto">
+    <div class="h-auto mb-2">
         <app-level-search [levelsearch$]="advancedSearch$" (levelSearchResult$)="levelSearchResultEvent($event)" [newSearch$]="newResultSearch$"></app-level-search>
+    </div>
+    <div class="h-auto">
+        <app-elements-search (filterByElements)="filterByElementsEvent($event)"></app-elements-search>
     </div>
 </div>

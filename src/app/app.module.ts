@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material-module/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AdvancedSearchModule } from './advanced-search/advanced-search.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,8 +17,6 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { UnitsListService } from '../service/unitsList.service';
 
 import { DisplayPictureDirective } from './units/display-picture.directive';
-import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
-import { LevelSearchComponent } from './advanced-search/level-search/level-search.component';
 
 
 @NgModule({
@@ -28,8 +27,6 @@ import { LevelSearchComponent } from './advanced-search/level-search/level-searc
     UnitsComponent,
     DisplayPictureDirective,
     SearchBarComponent,
-    AdvancedSearchComponent,
-    LevelSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +35,8 @@ import { LevelSearchComponent } from './advanced-search/level-search/level-searc
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AdvancedSearchModule
   ],
   providers: [UnitsListService],
   bootstrap: [AppComponent]

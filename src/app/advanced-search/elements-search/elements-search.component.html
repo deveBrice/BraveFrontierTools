@@ -1,0 +1,15 @@
+<div>
+    <div class="">
+        <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Elements</h2>
+        <mat-divider class="bg-white"></mat-divider>
+    </div>
+    <div class="flex flex-col">
+        <div *ngFor="let el of displayElementList" class="checkbox-custom {{el.elementPicture}}">
+            <mat-checkbox class="ml-5  mt-4" [(ngModel)]="el.state" (change)="selectedElement($event)"> 
+                <span class="text-white !mb-0 ml-2 text-lg"> {{el.name}}</span>  
+            </mat-checkbox>
+       </div>
+    </div>
+</div>
+
+
