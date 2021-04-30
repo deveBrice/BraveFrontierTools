@@ -11,8 +11,9 @@ import { filter, map, take, distinctUntilChanged } from 'rxjs/operators';
   styleUrls: ['./units.component.scss']
 })
 
-export class UnitsComponent implements OnInit, OnDestroy {
 
+export class UnitsComponent implements OnInit, OnDestroy {
+  
    unitsList$: Observable<IUnitsList[]>;
    initialUnitsList$: Observable<Array<IUnitsList>> = this.unitsListService.getUnitsList();
    behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
