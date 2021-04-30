@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-bar',
@@ -14,8 +15,8 @@ export class SearchBarComponent implements OnInit {
   @Input() searchTextField$: Observable<Array<any>>; 
   @Output() resultSearchTextField$ = new EventEmitter<any>();
   @Input() newResultSearch$: Observable<Array<any>>;
-
   searchApi$: Observable<Array<any>>;
+
   constructor(private fb: FormBuilder) {
     this.displaySearchBar();
    }
@@ -25,7 +26,6 @@ export class SearchBarComponent implements OnInit {
   }
 
 
-
   displaySearchBar = () => {
     this.rForm = this.fb.group({
       "search":[ '',[Validators.required, Validators.maxLength(100)]]
@@ -33,31 +33,16 @@ export class SearchBarComponent implements OnInit {
   }
   
   searchApi = () => {
-    this.rForm.valueChanges.subscribe(
-      val => {
-   
-        /*this.searchApi$ = this.searchTextField$.pipe (
-          map(searchTextField => searchTextField.filter((res) => { 
-              return res.name.includes(val.search)
-            }))
-         )*/
-        
-        this.resultSearchTextField$.emit(val);
-/*
-        this.searchTextField$.subscribe(
-          searchApi => console.log(searchApi)
-        )*/
-      }
+
+    const searchText$: Observable<string> = this.rForm.valueChanges.pipe(
+      map(text => {
+       
+        return text.search 
+      })
     )
+
+   searchText$.subscribe (
+    searchText => this.resultSearchTextField$.emit({type: 'inputText', keyApi: 'name', filterName: 'name', newValue:searchText})
+   )
   }
- /* ngOnChanges(changes: SimpleChanges) {
-  
-    for(const c in changes) {
-      changes[c].currentValue.subscribe(
-        ch => console.log(ch)
-      )
-    }
-
-
- }*/
 }

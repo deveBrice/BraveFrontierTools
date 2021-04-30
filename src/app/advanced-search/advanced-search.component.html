@@ -3,6 +3,6 @@
         <app-level-search [levelsearch$]="advancedSearch$" (levelSearchResult$)="levelSearchResultEvent($event)" [newSearch$]="newResultSearch$"></app-level-search>
     </div>
     <div class="h-auto">
-        <app-elements-search></app-elements-search>
+        <app-elements-search (filterByElements)="filterByElementsEvent($event)"></app-elements-search>
     </div>
 </div>

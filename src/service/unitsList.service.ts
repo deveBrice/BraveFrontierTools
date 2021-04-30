@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IUnitsList } from '../interface/unitsList/iUnitsList.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Subscription } from 'rxjs'
 
 @Injectable()
 
-export class UnitsListService { 
+export class UnitsListService implements OnDestroy { 
     api = 'assets/api/unitsList.json';
     unitsList$: Observable<Array<IUnitsList>>;
     behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
+    subscription$: Subscription;
+    currentFilter = {array: []}
 
     constructor(private httpClient: HttpClient){
         this.behaviorSubjectUpdateUnitsList$ = <BehaviorSubject<Array<IUnitsList>>> new BehaviorSubject([]);
@@ -21,8 +24,26 @@ export class UnitsListService {
     }
 
     subscribeUnitsList = () => {
-        this.getUnitsList().subscribe(
-            unitsList => this.behaviorSubjectUpdateUnitsList$.next(unitsList)
+      this.subscription$ = this.getUnitsList().subscribe(
+            unitsList => {
+              this.currentFilter.array = unitsList
+              return this.behaviorSubjectUpdateUnitsList$.next(unitsList)
+            }
         )
+    }
+
+    updateUnitsList = (unitsList$: Observable<any[]>) => {
+   
+      this.subscription$ = unitsList$.subscribe(
+        unitsList => {
+      
+         return this.behaviorSubjectUpdateUnitsList$.next(unitsList)
+        }
+       )
+       
+    }
+
+    ngOnDestroy(){
+      this.subscription$.unsubscribe();
     }
 }

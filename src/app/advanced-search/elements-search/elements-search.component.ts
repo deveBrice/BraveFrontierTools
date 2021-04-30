@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-elements-search',
@@ -8,46 +8,54 @@ import { Component, OnInit } from '@angular/core';
 export class ElementsSearchComponent implements OnInit {
 test = 0;
 radioStatus = null;
+elementsSearchResult: any[];
+@Output() filterByElements = new EventEmitter<any>();
+   
   constructor() { }
 
   ngOnInit(): void {
-    this.elementName()
+
   }
 
   elementsList: any[] = [
-    {name: 'Feu', state: true, elementPicture: 'checkbox-custom-fire'},
-    {name: 'Eau', state: true, elementPicture: 'checkbox-custom-water'},
-    {name: 'Terre', state: true, elementPicture: 'checkbox-custom-earth'},
-    {name: 'Foudre', state: true, elementPicture: 'checkbox-custom-lightning'},
-    {name: 'Lumière', state: true, elementPicture: 'checkbox-custom-light'},
-    {name: 'Ténèbre', state: true, elementPicture: 'checkbox-custom-dark'}
+    {name: 'Feu', state: false, elementPicture: 'checkbox-custom-fire'},
+    {name: 'Eau', state: false, elementPicture: 'checkbox-custom-water'},
+    {name: 'Terre', state: false, elementPicture: 'checkbox-custom-earth'},
+    {name: 'Foudre', state: false, elementPicture: 'checkbox-custom-lightning'},
+    {name: 'Lumière', state: false, elementPicture: 'checkbox-custom-light'},
+    {name: 'Ténèbre', state: false, elementPicture: 'checkbox-custom-dark'}
   ] 
 
-  displayElementList = (): any[] => {
+ get displayElementList (): any[] {
     return this.elementsList;
   }
 
-  elementName = () => {
-    this.elementsList.filter((res) => {
-      console.log(res.name)
-      return this.radioStatus = res.name;
-    })
+
+  selectedElement = () => {
+   
+   this.displayElementList.reduce((elementsList: any[], elementsObject: any) => {
+     if(elementsObject.state) {
+       elementsList.push(elementsObject.name);
+       this.elementsSearchResult = elementsList   
+     }
+
+     return elementsList;
+    }, [])
+    this.filterByElements.emit({type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult})
+
+    this.checkeStateElement(this.elementsList) 
   }
 
-  selectedElement = (event, el) => {
-   /* event.preventDefault();
-    console.log(el.value)
-      if(this.radioStatus && this.radioStatus === el.value) {
-        el.checked = !el.checked
-        console.log(el.checked)
-        this.radioStatus = null;
-      } else {
-        this.radioStatus = el.value;
-      //  el.checked = true
+     // checked if all the value with state are false
+     checkeStateElement = (arrayList: any[]) => {
+      let checker = arr => arr.every(v => v.state === false);
+  
+      let checkerResult = checker(arrayList)
     
-      }*/
-  }
-
-
+      if(checkerResult === true) {
+  
+       return this.filterByElements.emit({type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: []})
+      }
+    }
 
 }
