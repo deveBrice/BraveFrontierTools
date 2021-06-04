@@ -4,23 +4,23 @@ import { switchMap } from 'rxjs/operators';
 import { UnitsListService } from '../../service/unitsList.service';
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 import { filter, map, take, distinctUntilChanged } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-units',
-  templateUrl: './units.component.html',
-  styleUrls: ['./units.component.scss']
+  selector: 'app-units-list',
+  templateUrl: './unitsList.component.html',
+  styleUrls: ['./unitsList.component.scss']
 })
 
+export class UnitsListComponent implements OnInit, OnDestroy {
 
-export class UnitsComponent implements OnInit, OnDestroy {
-  
    unitsList$: Observable<IUnitsList[]>;
    initialUnitsList$: Observable<Array<IUnitsList>> = this.unitsListService.getUnitsList();
    behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
    filterListActivated$ = of({});
    unitsListResult$: Observable<IUnitsList[]>
 
-  constructor(private unitsListService: UnitsListService) {}
+  constructor(private unitsListService: UnitsListService, private router: Router) {}
 
   ngOnInit(): void {
     this.displayUnitsList();
@@ -121,6 +121,10 @@ export class UnitsComponent implements OnInit, OnDestroy {
        this.unitsListService.behaviorSubjectUpdateUnitsList$.next(unitsFilter)
     }
   )
+ }
+
+ selectedUnit = (unitsList: any) => {
+   this.router.navigate(["/units-details", unitsList.id, unitsList.name.replace(" ", "-")])
  }
 
 

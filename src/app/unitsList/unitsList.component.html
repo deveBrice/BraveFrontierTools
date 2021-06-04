@@ -13,7 +13,7 @@
 <div class="flex flex-wrap justify-center md:justify-start">
   <ng-template ngFor let-unitsList [ngForOf]="unitsList$ | async" let-i="index"> 
   <div class="h-124 w-80">
-   <mat-card class=" bg-blackCardUnit m-2">
+   <mat-card class=" bg-blackCardUnit m-2" (click)="selectedUnit(unitsList)">
      <mat-card-header class="w-full flex justify-center">
       <div class="w-60 flex justify-between">
         <div class="h-6 w-6">
