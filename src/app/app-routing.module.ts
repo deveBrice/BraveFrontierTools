@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UnitsComponent } from './units/units.component';
+import { UnitsListComponent } from './unitsList/unitsList.component';
+import { UnitsDetailsComponent } from './unitsList/units-details/units-details.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   /*{path: '', pathMatch: 'full', redirectTo: ''},*/
   {component: HomeComponent, path: ''},
-  {component: UnitsComponent, path: 'units'}
+  {component: UnitsListComponent, path: 'unitsList'},
+  {component: UnitsDetailsComponent, path: 'units-details/:id/:name'}
 ];
 
 @NgModule({
