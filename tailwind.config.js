@@ -1,3 +1,4 @@
+const { colors } = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 module.exports = {
     prefix: '',
@@ -10,7 +11,7 @@ module.exports = {
     theme: {
       extend: {
         screens: {
-          xs: '360px',
+          xs: '300px',
           sm: '640px',
           md: '768px',
           lg: '1024px',
@@ -19,6 +20,7 @@ module.exports = {
         },
 
         colors: {
+          ...colors,
           blackCardUnit: '#2C2C2C',  //423D3D
           fireColor: '#FE2E2E',
           waterColor: '#3471EB',
@@ -26,8 +28,37 @@ module.exports = {
           lightningColor: '#F3F781',
           lightColor: '#BFBFBF',
           darkColor: '#D0A9F5',
-          stars: '#FEF505'
+          stars: '#FEF505',
+          bgGray: '#C8C8C8',
+          bgDarkGray: '#808080',
+          bgOrange: '#FFC5A4',
+          bgDarkOrange: '#FE792E',
+          bgBlue: '#5B76AA',
+          bgDarkBlue: '#1F54BB',
+          bgYellow: '#F6D788',
+          bgDarkYellow: '#FEB805',
+          bgRed: '#FF8787',
+          bgDarkRed: '#FE2E2E',
         },
+
+        
+          gradientColorStops: theme => ({
+           ...theme('colors'),
+           'primary': '#3490dc',
+           'secondary': '#ffed4a',
+           'danger': '#e3342f',
+          }),
+
+          fill: {
+            current: 'currentColor',
+          },
+
+          fill: theme => ({
+            'red': theme('colors.red.500'),
+            'green': theme('colors.green.500'),
+            'blue': theme('colors.blue.500'),
+          }),
+      
 
         gridTemplateRows: {
           '10': 'minmax(10px, 1fr)',
@@ -37,8 +68,14 @@ module.exports = {
          '16': 'repeat(10, calc(15% * 1))',
         },
         spacing: {
+
+          '26.5': '6.625rem',
+          '98': '24.5rem',
+          '104': '26rem',
           '120': '30rem',
           '124': '31rem',
+          '130': '32.5rem',
+          '135': '33.75rem',
           '140': '35rem',
           '300': '75rem',
           '402': '100.5rem',
@@ -67,6 +104,14 @@ module.exports = {
        '2xl': '1rem',
        'full': '9999px',
        'large': '12px',
+      },
+
+      listStyleType: {
+        none: 'none',
+       disc: 'disc',
+       decimal: 'decimal',
+       square: 'square',
+       roman: 'upper-roman',
       }
     },
     variants: {
@@ -78,6 +123,7 @@ module.exports = {
         borderRadius: ['hover', 'focus', 'important'],
         backgroundImage: ['hover', 'focus', 'important'],
         display: ['hover', 'focus'],
+        width: ['last'],
       },
     },
     plugins: [

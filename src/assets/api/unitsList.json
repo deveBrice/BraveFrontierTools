@@ -288,7 +288,7 @@
     "elementPicture": {"picture": "assets/imgs/unitsList/elements/earth.png", "alt":"earth picture"},
     "color": "#04B404",
     "evolveFamily": "Lance",
-    "unit":{"picture": "assets/imgs/unitsList/Lance/units/lance_nature.png", "alt": "Lance Nature"},
+    "unit":{"picture":"assets/imgs/unitsList/Lance/units/lance_nature.png", "alt": "Male picture"},
     "animationBattle": [
       {
         "combatMode" : "assets/imgs/unitsList/Lance/animations/lance_nature_combat_mode_anime.gif", 
@@ -764,7 +764,7 @@
     ],
     "fields": [{"naturalDungeon": "assets/imgs/fields/dungeon_battle.jpg", "arena": "assets/imgs/fields/arena.jpg"}],
     "favoris": false,
-    "baseStat":[{"hp": 3792, "atk": 1294, "def": 851, "rec": 813}],
+    "baseStat":[{"hp": 1450, "atk": 550, "def": 280, "rec": 210}],
     "chainsEvolves":[
       {"evolve": "assets/imgs/unitsList/Zegar/evolves/chain_evolve_bete_zegar.png", "alt":"Bête Zegar"},
       {"evolve": "assets/imgs/unitsList/Zegar/evolves/chain_evolve_zegar_enrage.png", "alt":"Zegar enragé"},
