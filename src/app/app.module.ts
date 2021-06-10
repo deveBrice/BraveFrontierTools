@@ -20,8 +20,6 @@ import { UnitDetailsService } from '../service/unitDetails.service';
 
 import { DisplayPictureDirective } from './unitsList/display-picture.directive';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +28,7 @@ import { DisplayPictureDirective } from './unitsList/display-picture.directive';
     UnitsListComponent,
     DisplayPictureDirective,
     SearchBarComponent,
-    UnitsDetailsComponent,
+    UnitsDetailsComponent
   ],
   imports: [
     BrowserModule,

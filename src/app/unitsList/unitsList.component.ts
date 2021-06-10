@@ -1,10 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, BehaviorSubject, Subscription, observable, of, combineLatest, from, merge  } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { elementAt, switchMap } from 'rxjs/operators';
 import { UnitsListService } from '../../service/unitsList.service';
+import { UnitDetailsService } from '../../service/unitDetails.service'
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 import { filter, map, take, distinctUntilChanged } from 'rxjs/operators';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-units-list',
@@ -19,11 +21,52 @@ export class UnitsListComponent implements OnInit, OnDestroy {
    behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
    filterListActivated$ = of({});
    unitsListResult$: Observable<IUnitsList[]>
+   obj = {}
 
-  constructor(private unitsListService: UnitsListService, private router: Router) {}
+  constructor(private unitsListService: UnitsListService, private router: Router, private unitDetailsService: UnitDetailsService ) {}
 
   ngOnInit(): void {
     this.displayUnitsList();
+
+    this.unitsListService.getUnitsList()
+    .subscribe(res => {
+      res.filter(a => {
+       this.obj[a.id] = a
+      })
+    //  console.log(this.obj)
+    })
+    
+   const unitDetails$ = this.unitDetailsService.getUnitDetails().pipe (
+     map(res => {
+      res.filter(a => {
+        this.obj[a.id] = a
+       })
+       return this.obj
+     })
+   )
+
+   const filterUnits$ = combineLatest(this.unitsListService.getUnitsList(), unitDetails$).pipe (
+      map(([unitsList, unitDetails])=> {
+        unitsList.filter(res => {
+         const test = Object.keys(unitDetails[res.id])
+           const result = test.map(res => res).indexOf("specialsAttacks")
+        //   console.log(result)
+            if(result !== -1) {
+           //  console.log(unitDetails[res.id])
+            }
+     
+        })
+      })
+   )
+
+   filterUnits$.subscribe()
+
+   /* .subscribe(res => {
+      res.filter(a => {
+       this.obj[a.id] = a
+      })
+ 
+    })*/
   }
 
   displayUnitsList = () => {
@@ -45,6 +88,11 @@ export class UnitsListComponent implements OnInit, OnDestroy {
 
   searchByElementEvent = ($event) => {
       this.globaleFilter($event, this.filterListActivated$);
+  }
+
+  filterBySpecialAttackUpdate = ($event) => {
+    //console.log($event)
+    this.globaleFilter($event, this.filterListActivated$);
   }
 
   //Combine all the filters and return one new unitsList containing the filter applicable
@@ -78,9 +126,18 @@ export class UnitsListComponent implements OnInit, OnDestroy {
     })
    );
 
+   const unitDetails$ = this.unitDetailsService.getUnitDetails().pipe (
+    map(res => {
+     res.filter(a => {
+       this.obj[a.id] = a
+      })
+      return this.obj
+    })
+  )
 
-  const unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$).pipe(
-    map(([initialUnitsList, removeFilter]) => 
+
+  const unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$).pipe(
+    map(([initialUnitsList, removeFilter, unitDetails]) => 
     initialUnitsList.filter (
       init => {
        
@@ -89,28 +146,42 @@ export class UnitsListComponent implements OnInit, OnDestroy {
         }
 
          for(let rf in removeFilter) {
+
           let checkboxFilter = false;
           let searchUnitName = false;
-
-          if(Array.isArray(removeFilter[rf]) === true) {
+          let searchUnitDetails = false;
+ 
+      
+          if(Array.isArray(removeFilter[rf])) {
              if(removeFilter[rf].includes(init[rf])){
                 checkboxFilter = true;
-             }
-           
-          }
-       
+             } 
+          } 
+
+          
           if(rf === 'name') {
             searchUnitName = init[rf].includes(removeFilter[rf])
           }
+          
+  
+             
+            for(let details in unitDetails[init.id][rf]) {
+          
+              if(removeFilter[rf].includes(details)) {
+                searchUnitDetails = true;
+              }
+            }
+          
+          
         
-           if(checkboxFilter === false && searchUnitName === false) {
-    
+           if(checkboxFilter === false && searchUnitName === false && searchUnitDetails === false) {
+      
               return false
             
            }
 
          }
-      
+
         return true
          
       })) 
@@ -118,6 +189,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
 
   unitsFilter$.subscribe(
     unitsFilter => {
+      console.log(unitsFilter)
        this.unitsListService.behaviorSubjectUpdateUnitsList$.next(unitsFilter)
     }
   )

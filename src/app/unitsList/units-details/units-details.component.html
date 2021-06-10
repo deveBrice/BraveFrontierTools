@@ -157,12 +157,12 @@
                 <h2 class="text-white !m-0">Leader Skill</h2>
                 </div>
                 <div class="ml-2">
-                    <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.lsInformation.title}}</h2>
+                    <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.lsInformations.title}}</h2>
                 </div>
             </div>
             <mat-divider class="bg-white"></mat-divider>
             <div class="text-white text-base w-full">
-                <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.lsInformation.description}}</p>
+                <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.lsInformations.description}}</p>
             </div>
         
                 <div class="border-2 text-white w-7 h-7 rounded-full absolute bottom-2 right-2">
@@ -176,7 +176,7 @@
                         <h3 class="text-white">Nom des éffets</h3>
                         <h3 class="text-white">Valeur des effets</h3>
                     </div>
-                    <div class="flex justify-between" *ngFor="let ls of unitDetails.specialsAttacks.lsInformation.lsValueDetails">
+                    <div class="flex justify-between" *ngFor="let ls of unitDetails.specialsAttacks.lsInformations.lsValueDetails">
                         <div class="flex text-white w-80 items-center !mb-2">
                             <img class="h-6 w-6" src="{{ls.icon}}" alt="">
                             <p class="text-white ml-2 !mb-0">{{ls.effectName}}</p>
@@ -194,12 +194,12 @@
                 <h2 class="text-white !m-0">Brave Burst</h2>
             </div>
             <div class="ml-2">
-                <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.bbInformation.title}}</h2>
+                <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.bbInformations.title}}</h2>
             </div>
             </div>
         <mat-divider class="bg-white"></mat-divider>
         <div class="text-white text-base w-full">
-            <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.bbInformation.description}}</p>
+            <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.bbInformations.description}}</p>
         </div>
             <div class="border-2 text-white w-7 h-7 rounded-full absolute bottom-2 right-2">
                 <mat-icon class="text-white cursor-pointer" (click)="specialAttackDetails(specialAttackObject.braveBurst)">{{details.braveBurst.chevronName}}</mat-icon>
@@ -212,7 +212,7 @@
                     <h3 class="text-white">Nom des effets</h3>
                     <h3 class="text-white">BB niveau 10</h3>
                 </div>
-                <div class="flex justify-between" *ngFor="let bb of unitDetails.specialsAttacks.bbInformation.bbValueDetails">
+                <div class="flex justify-between" *ngFor="let bb of unitDetails.specialsAttacks.bbInformations.bbValueDetails">
                     <div class="flex text-white w-80 items-center">
                         <img class="h-6 w-6" src="{{bb.icon}}" alt="">
                         <p class="text-white !mb-0 ml-2">{{bb.effectName}}</p>
