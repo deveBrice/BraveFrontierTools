@@ -47,23 +47,9 @@
             {"type": "Max Bonus", "hp": "+400(×8)", "atk": "+160(×8)","def": "+80(×4)","rec": "+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
-                "title":"Puissante esprit de feu",
-                "description": "Augmente la puissance d'attaque des types feu",
-                 "lsValueDetails": [
-                          {
-                             "icon": "assets/imgs/buffs/buff_atk_elementary/fire_atk_up.png", 
-                             "alt": "Augmentation de l'attaque élément feu",
-                             "effectName": "Augmentation de l'attaque de feu", 
-                             "effectDescription": "Attaque de feu +25%",
-                             "attackElementary": "fire_atk_up",
-                             "valueDamage": 25
-                          }
-                    ]  
-                
-            },
+           
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Flamboiement",
               "description": "Combos de 5 attaques de feu sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -157,7 +143,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+200(×10)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissante esprit de feu",
                 "description": "Augmente la puissance d'attaque des types feu de 25%",
                  "lsValueDetails": [
@@ -172,7 +158,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Extra Flamboiement",
               "description": "Combos de 5 attaques de feu sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -262,7 +248,7 @@
             {"type":"Max Bonus", "hp":"+700(×14)", "atk":"+240(×12)", "def":"+140(×7)", "rec":"+140(×7)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu du feu",
                 "description": "Augmente la puissance d'attaque des types feu de 50%",
                  "lsValueDetails": [
@@ -277,7 +263,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Embrasement infini",
               "description": "Combos de 6 puissantes attaques de feu sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -369,7 +355,7 @@
             {"type":"Max Bonus", "hp":"+900(×18)", "atk":"+360(×18)", "def":"+200(×10)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu du feu",
                 "description": "Augmente la puissance d'attaque des types feu de 50%",
                  "lsValueDetails": [
@@ -384,7 +370,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Nova Flamboiement",
               "description": "Combos 6 puissantes attaques de feu sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -475,7 +461,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit d'eau",
                 "description": "Augmente la puissance d'attaques des types eau de 25%",
                  "lsValueDetails": [
@@ -490,7 +476,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Lame astrale",
               "description": "Combos de 4 pussantes attaque d'eau sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -581,7 +567,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+160(×8)", "def":"+160(×8)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit d'eau",
                 "description": "Augmente la puissance d'attaque des types eau de 25%",
                  "lsValueDetails": [
@@ -596,7 +582,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Hâle divine",
               "description": "Combos 5 attaques d'eau sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -685,7 +671,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+200(×10)", "def":"+200(×10)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu d'eau",
                 "description": "Augmente la puissance d'attaque des types eau de 50%",    
                  "lsValueDetails": [
@@ -700,7 +686,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Tempête de douleur",
               "description": "Combos de 7 puissantes attaques d'eau sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -791,7 +777,7 @@
             {"type":"Max Bonus", "hp":"+750(×15)", "atk":"+300(×15)", "def":"300(×15)", "rec":"+300(×15)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu d'eau",
                 "description": "Augmente la puissance d'attaque des types eau de 50%",
                  "lsValueDetails": [
@@ -806,7 +792,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Zéro absolu",
               "description": "Combos de 8 puissantes attaques d'eau sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -894,7 +880,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de terre",
                 "description": "Augmente la puissance d'attaque des types terre de 25%",
                  "lsValueDetails": [
@@ -909,7 +895,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Tempête éclair",
               "description": "Combos de 4 attaques de terre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -999,7 +985,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+160(×8)", "def":"160(×8)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de terre",
                 "description": "Augmente la puissance d'attaque des types terre de 25%",
                  "lsValueDetails": [
@@ -1014,7 +1000,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Tornade éclair",
               "description": "Combos de 5 attaques de terre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -1102,7 +1088,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+200(×10)", "def":"+200(×10)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de terre",
                 "description": "Augmente la puissance d'attaque des types terre de 50%",
                  "lsValueDetails": [
@@ -1117,7 +1103,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Mistral enragé",
               "description": "Combos de 5 puissantes attaques de terre sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -1208,7 +1194,7 @@
             {"type":"Max Bonus", "hp":"+750(×15)", "atk":"+300(×15)", "def":"+300(×15)", "rec":"+300(×15)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de terre",
                 "description": "Augmente la puissance d'attaque des types terre de 50%",
                  "lsValueDetails": [
@@ -1223,7 +1209,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Zéphyr éternel",
               "description": "Combos de 6 puissantes attaques de terre sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -1314,7 +1300,7 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+160(×8)", "def":"+80(×4)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de foudre",
                 "description": "Augmente la puissance d'attaque des types foudre de 25%",
                  "lsValueDetails": [
@@ -1329,7 +1315,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Expulsion de foudre",
               "description": "Combos de 2 attaques de foudre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -1421,7 +1407,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+200(×10)", "def":"+120(×6)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de foudre",
                 "description": "Augmente la puissance d'attaque des types foudre de 25%",
                  "lsValueDetails": [
@@ -1436,7 +1422,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Exécution de foudre",
               "description": "Combos de 2 attaques de foudre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -1525,7 +1511,7 @@
             {"type":"Max Bonus", "hp":"+350(×7)", "atk":"+260(×13)", "def":"+140(×7)", "rec":"+160(×13)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de la foudre",
                 "description": "Augmente la puissance d'attaque des types foudre de 50%",
                  "lsValueDetails": [
@@ -1540,7 +1526,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Rétribution de foudre",
               "description": "Combos de 5 puissantes attaques de foudre sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -1631,7 +1617,7 @@
             {"type":"Max Bonus", "hp":"+500", "atk":"+400", "def":"+200", "rec":"+400"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de la foudre",
                 "description": "Augmente la puissance d'attaque des types foudre de 50%",
                  "lsValueDetails": [
@@ -1646,7 +1632,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Foudre céleste",
               "description": "Combos de 7 puissantes attaques de foudre sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -1737,7 +1723,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de lumière",
                 "description": "Augmente la puissance d'attaque des types lumière de 25%",
                  "lsValueDetails": [
@@ -1752,7 +1738,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Épée divine",
               "description": "Combos de 2 attaques de lumière sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -1843,7 +1829,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+160(×8)", "def":"+160(×8)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de lumière",
                 "description": "Augmente la puissance d'attaque des types lumière de 25%",
                 
@@ -1859,7 +1845,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Jugement capital",
               "description": "Combos de 3 attaques de lumière sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -1948,7 +1934,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+200(×10)", "def":"+200(×10)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de lumière",
                 "description": "Augmente la puissance d'attaque des types lumière de 50%",
                  "lsValueDetails": [
@@ -1963,7 +1949,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Fléau des ennemis",
               "description": "Combos de 4 attaques de lumière sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -2055,7 +2041,7 @@
             {"type":"Max Bonus", "hp":"+750(×15)", "atk":"+300(×15)", "def":"+300(×15)", "rec":"+300(×15)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu de lumière",
                 "description": "Augmente la puissance d'attaque des types lumière de 50%",
                  "lsValueDetails": [
@@ -2070,7 +2056,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Danger du messie",
               "description": "Combos de 5 puissantes attaques de lumière sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -2161,7 +2147,7 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+160(×8)", "def":"+160(×8)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de ténèbre",
                 "description": "Augmente la puissance d'attaque des types ténèbre de 25%",
                  "lsValueDetails": [
@@ -2176,7 +2162,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Cendres coupables",
               "description": "Combos de 3 attaques de ténèbre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -2271,7 +2257,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+200(×10)", "def":"+200(×10)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant esprit de ténèbre",
                 "description": "Augmente la puissance d'attaque des types ténèbre de 25%",
                  "lsValueDetails": [
@@ -2286,7 +2272,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Éclipse de gravité",
               "description": "Combos 4 attaques de ténèbre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -2375,7 +2361,7 @@
             {"type":"Max Bonus", "hp":"+350(×7)", "atk":"+260(×13)", "def":"+260(×13)", "rec":"+140(×7)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu des ténèbres",
                 "description": "Augmente la puissance d'attaque des types ténèbre de 50%",
                  "lsValueDetails": [
@@ -2390,7 +2376,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Pilier du néant",
               "description": "Combos de 4 puissantes attaques de ténèbre sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -2482,7 +2468,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+400(×20)", "def":"+400(×20)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Puissant dieu des ténèbres",
                 "description": "Augmente la puissance d'attaque des types ténèbre de 50%",
                  "lsValueDetails": [
@@ -2497,7 +2483,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Tour vermillon",
               "description": "Combos de 5 puissantes attaques de ténèbre sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -2588,7 +2574,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+80(×4)", "def":"+160(×8)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux intense",
                 "description": "Petite augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -2602,7 +2588,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Attaque Griffe de feu",
               "description": "Combos 2 attaques de feu sur un ennemi avec une probailité de mettre blessure",
               "crystalGenerate": "15CC",
@@ -2704,7 +2690,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+120(×6)", "def":"+200(×10)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair intense",
                 "description": "Augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -2718,7 +2704,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Attaque source de feu",
               "description": "Combos de 4 puissantes attaques de feu sur un ennemi avec une probailité de mettre blessure",
               "crystalGenerate": "20CC",
@@ -2815,7 +2801,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+140(×7)", "def":"+260(×13)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope intense",
                 "description": "Grande augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -2829,7 +2815,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Double attaque infernale",
               "description": "Combos  de 7 puissante attaques de feu sur un ennemi avec une probailité de mettre blessure",
               "crystalGenerate": "25CC",
@@ -2928,7 +2914,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+100(×5)", "def":"+100(×5)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux intense",
                 "description": "Petite augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -2942,7 +2928,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Aiguille enragée",
               "description": "Combos  de 7 puissante attaques d'eau sur un ennemi avec une probailité de mettre affaiblissement",
               "crystalGenerate": "15CC",
@@ -3044,7 +3030,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+140(×7)", "def":"+140(×7)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair intense",
                 "description": "Augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -3058,7 +3044,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Ballade enragée",
               "description": "Combos de 5 puissantes attaques d'eau sur un ennemi avec une probailité de mettre affaiblissement",
               "crystalGenerate": "20CC",
@@ -3155,7 +3141,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+180(×9)", "def":"+180(×9)", "rec":"+240(×12)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope intense",
                 "description": "Grande augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -3169,7 +3155,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Double attaque infernale",
               "description": "Combos  de 6 puissantes attaques d'eau sur un ennemi avec une probailité de mettre affaiblissement",
               "crystalGenerate": "20CC",
@@ -3267,7 +3253,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux violente",
                 "description": "Petite augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3282,7 +3268,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Ciel de carnage",
               "description": "Combos  de 3 attaques de terre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -3375,7 +3361,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+160(×8)", "def":"+160(×8)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair violent",
                 "description": "Augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3390,7 +3376,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Aiguille supérieure",
               "description": "Combos  de 3 attaques de terre sur tous les ennemis",
               "crystalGenerate": "18CC",
@@ -3479,7 +3465,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+200(×10)", "def":"+200(×10)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope violent",
                 "description": "Grande augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3494,7 +3480,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Étoile filante",
               "description": "Combos  de 6 attaques de terre sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -3583,7 +3569,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+80(×4)", "def":"+160(×8)", "rec":"+120(×6)"}
         ], 
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux violente",
                 "description": "Petite augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3598,7 +3584,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Ordre de foudre",
               "description": "Augmentation de l'attaque pour tous les alliés pendant 3 tours",
               "crystalGenerate": "13CC",
@@ -3690,7 +3676,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+120(×6)", "def":"+200(×10)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair violent",
                 "description": "Augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3705,7 +3691,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Rage de foudre",
               "description": "Augmentation beaucoup l'attaque pour tous les alliés pendant 3 tours",
               "crystalGenerate": "16CC",
@@ -3793,7 +3779,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+140(×7)", "def":"+260(×13)", "rec":"+200(×10)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope violent",
                 "description": "Grande augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3808,7 +3794,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Règne de foudre",
               "description": "Augmentation beaucoup l'attaque pour tous les alliés pendant 3 tours",
               "crystalGenerate": "20CC",
@@ -3897,7 +3883,7 @@
             {"type":"Max Bonus", "hp":"+400(×8)", "atk":"+100(×5)", "def":"+100(×5)", "rec":"+100(×5)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux violente",
                 "description": "Petite augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -3912,7 +3898,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Coup rude",
               "description": "Combos de 2 attaques de lumière sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -4004,7 +3990,7 @@
             {"type":"Max Bonus", "hp":"+500(×10)", "atk":"+120(×6)", "def":"+120(×5)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair violent",
                 "description": "Augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -4019,7 +4005,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Coup brutal",
               "description": "Combos de 3 puissantes attaques de lumière sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -4107,7 +4093,7 @@
             {"type":"Max Bonus", "hp":"+750(×15)", "atk":"+160(×8)", "def":"+160(×8)", "rec":"+160(×8)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope violent",
                 "description": "Grande augmentation des cristaux de combat par dégâts étincelles",
                  "lsValueDetails": [
@@ -4122,7 +4108,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Coup vulgaire",
               "description": "Combos de 4 puissantes attaques de lumière sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -4211,7 +4197,7 @@
             {"type":"Max Bonus", "hp":"+100(×2)", "atk":"+280(×14)", "def":"+40(×2)", "rec":"+40(×2)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Lux intense",
                 "description": "Petite augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -4226,7 +4212,7 @@
                     ] 
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Rayon de lune spécial",
               "description": "Combos de 2 attaques de Ténèbre sur tous les ennemis",
               "crystalGenerate": "15CC",
@@ -4320,7 +4306,7 @@
             {"type":"Max Bonus", "hp":"+150(×3)", "atk":"+300(×15)", "def":"+60(×3)", "rec":"+60(×3)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Éclair intense",
                 "description": "Augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -4335,7 +4321,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Éclair d'épée spécial",
               "description": "Combos de 3 puissantes attaques de Ténèbre sur tous les ennemis",
               "crystalGenerate": "20CC",
@@ -4424,7 +4410,7 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+400(×20)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Stroboscope intense",
                 "description": "Grande augmentation des dégâts étincelles",
                  "lsValueDetails": [
@@ -4439,7 +4425,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Éclair d'aurore spécial",
               "description": "Combos de 4 puissantes attaques de Ténèbre sur tous les ennemis",
               "crystalGenerate": "25CC",
@@ -4530,12 +4516,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Flamme mordante",
               "description": "Attaque de feu sur un ennemi",
               "crystalGenerate": "12CC",
@@ -4621,7 +4607,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection du feu",
                 "description": "Dégâts de feu réduits de 10%",
                  "lsValueDetails": [
@@ -4636,7 +4622,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Flamme dévorante",
               "description": "Combos de 2 puissantes attaques de feu sur un ennemi",
               "crystalGenerate": "12CC",
@@ -4721,12 +4707,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Glace mordante",
               "description": "Attaque d'eau sur un ennemi",
               "crystalGenerate": "12CC",
@@ -4812,7 +4798,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection d'eau",
                 "description": "Dégâts d'eau réduits de 10%",
                  "lsValueDetails": [
@@ -4827,7 +4813,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Glace dévorante",
               "description": "attaque puissante d'eau sur un ennemi",
               "crystalGenerate": "12CC",
@@ -4912,12 +4898,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Bois mordante",
               "description": "Attaque de terre sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5004,7 +4990,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection de terre",
                 "description": "Dégâts de terre réduits de 10%",
                  "lsValueDetails": [
@@ -5019,7 +5005,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Bois dévorante",
               "description": "Combos de 2 puissantes attaquess de terre sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5104,12 +5090,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Choc mordante",
               "description": "Attaque de foudre sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5196,7 +5182,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection de foudre",
                 "description": "Dégâts de foudre réduits de 10%",
                  "lsValueDetails": [
@@ -5211,7 +5197,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Choc dévorante",
               "description": "Combos de 2 puissantes attaquess de foudre sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5296,12 +5282,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Photon mordante",
               "description": "Attaque de lumière sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5388,7 +5374,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection de lumière",
                 "description": "Dégâts de lumière réduits de 10%",
                  "lsValueDetails": [
@@ -5403,7 +5389,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Photon dévorante",
               "description": "Combos de 2 puissantes attaquess de lumière sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5488,12 +5474,12 @@
             {"type":"Max Bonus", "hp":"+200(×4)", "atk":"+80(×4)", "def":"+80(×4)", "rec":"+80(×4)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Aucune",
                 "description": "Aucune"
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Ombre mordante",
               "description": "Attaque de ténèbre sur un ennemi",
               "crystalGenerate": "12CC",
@@ -5580,7 +5566,7 @@
             {"type":"Max Bonus", "hp":"+300(×6)", "atk":"+120(×6)", "def":"+120(×6)", "rec":"+120(×6)"}
         ],
         "specialsAttacks": {
-            "lsInformation": {
+            "lsInformations": {
                 "title":"Protection de ténèbre",
                 "description": "Dégâts de ténèbre réduits de 10%",
                  "lsValueDetails": [
@@ -5595,7 +5581,7 @@
                     ]  
             },
 
-           "bbInformation": {
+           "bbInformations": {
               "title":"Ombre dévorante",
               "description": "Combos de 2 puissantes attaquess de ténèbre sur un ennemi",
               "crystalGenerate": "12CC",

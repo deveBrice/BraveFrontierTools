@@ -5,7 +5,7 @@
     </div>
     <div class="flex flex-col">
         <div *ngFor="let el of displayElementList" class="checkbox-custom {{el.elementPicture}}">
-            <mat-checkbox class="ml-5  mt-4" [(ngModel)]="el.state" (change)="selectedElement($event)"> 
+            <mat-checkbox class="ml-5 mt-4" [(ngModel)]="el.state" (change)="selectedElement($event)"> 
                 <span class="text-white !mb-0 ml-2 text-lg"> {{el.name}}</span>  
             </mat-checkbox>
        </div>

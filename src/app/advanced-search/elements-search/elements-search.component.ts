@@ -9,6 +9,8 @@ export class ElementsSearchComponent implements OnInit {
 test = 0;
 radioStatus = null;
 elementsSearchResult: any[];
+keyApiName: string
+
 @Output() filterByElements = new EventEmitter<any>();
    
   constructor() { }
@@ -37,11 +39,13 @@ elementsSearchResult: any[];
      if(elementsObject.state) {
        elementsList.push(elementsObject.name);
        this.elementsSearchResult = elementsList   
+      
      }
 
      return elementsList;
     }, [])
-    this.filterByElements.emit({type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult})
+    
+    this.filterByElements.emit({from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult})
 
     this.checkeStateElement(this.elementsList) 
   }
@@ -54,7 +58,7 @@ elementsSearchResult: any[];
     
       if(checkerResult === true) {
   
-       return this.filterByElements.emit({type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: []})
+       return this.filterByElements.emit({from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: []})
       }
     }
 

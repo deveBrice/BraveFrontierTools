@@ -26,7 +26,17 @@ module.exports = {
           lightningColor: '#F3F781',
           lightColor: '#BFBFBF',
           darkColor: '#D0A9F5',
-          stars: '#FEF505'
+          stars: '#FEF505',
+          bgGray: '#C8C8C8',
+          bgDarkGray: '#808080',
+          bgOrange: '#FFC5A4',
+          bgDarkOrange: '#FE792E',
+          bgBlue: '#5B76AA',
+          bgDarkBlue: '#1F54BB',
+          bgYellow: '#F6D788',
+          bgDarkYellow: '#FEB805',
+          bgRed: '#FF8787',
+          bgDarkRed: '#FE2E2E'
         },
 
         gridTemplateRows: {

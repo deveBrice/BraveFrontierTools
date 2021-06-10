@@ -6,7 +6,12 @@
   <div class="flex flex-col lg:flex-row">
  
     <div class="h-auto">
-      <app-advanced-search (searchByLevel$)="searchByLevelEvent($event)" (filterByElementsUpdate)="searchByElementEvent($event)"></app-advanced-search>
+      <app-advanced-search 
+      (searchByLevel$)="searchByLevelEvent($event)" 
+      (filterByElementsUpdate)="searchByElementEvent($event)"
+      (filterBySpecialAttackUpdate)="filterBySpecialAttackUpdate($event)">
+
+    </app-advanced-search>
     </div>
 
 

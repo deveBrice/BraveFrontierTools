@@ -54,7 +54,7 @@ export class LevelSearchComponent implements OnInit {
       return levels
     }, [])
 
-    this.levelSearchResult$.emit({type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult})
+    this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult})
     this.checkeStateLevel(this.levelList);
   }
 
@@ -65,7 +65,7 @@ export class LevelSearchComponent implements OnInit {
     let checkerResult = checker(arrayList)
   
     if(checkerResult === true) {
-      return this.levelSearchResult$.emit({type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []})
+      return this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []})
     }
   }
 }
