@@ -47,6 +47,7 @@ module.exports = {
          '16': 'repeat(10, calc(15% * 1))',
         },
         spacing: {
+          '74': '18.5rem',
           '120': '30rem',
           '124': '31rem',
           '140': '35rem',

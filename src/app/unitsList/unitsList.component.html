@@ -1,24 +1,25 @@
 
-<div>
+<div class="h-auto">
   <div class="pt-5 flex justify-center md:justify-start ml-2">
     <app-search-bar (resultSearchTextField$)="searchByInputTextEvent($event)"></app-search-bar>
   </div>
   <div class="flex flex-col lg:flex-row">
  
-    <div class="h-auto">
+    <div>
       <app-advanced-search 
       (searchByLevel$)="searchByLevelEvent($event)" 
       (filterByElementsUpdate)="searchByElementEvent($event)"
-      (filterBySpecialAttackUpdate)="filterBySpecialAttackUpdate($event)">
-
+      (filterBySpecialAttackUpdate)="filterBySpecialAttackUpdate($event)"
+      (filterByOrderUpdate)="filterByOrderUpdate($event)">
+      
     </app-advanced-search>
     </div>
 
 
-<div class="flex flex-wrap justify-center md:justify-start">
+<div class="h-full flex flex-wrap justify-center md:justify-start">
   <ng-template ngFor let-unitsList [ngForOf]="unitsList$ | async" let-i="index"> 
-  <div class="h-124 w-80">
-   <mat-card class=" bg-blackCardUnit m-2" (click)="selectedUnit(unitsList)">
+ 
+   <mat-card class="h-120 w-74 bg-blackCardUnit m-2 cursor-pointer" (click)="selectedUnit(unitsList)">
      <mat-card-header class="w-full flex justify-center">
       <div class="w-60 flex justify-between">
         <div class="h-6 w-6">
@@ -89,7 +90,7 @@
       </div>
     </mat-card-content>
    </mat-card>
-   </div>
+
   </ng-template>
  </div>
 </div>

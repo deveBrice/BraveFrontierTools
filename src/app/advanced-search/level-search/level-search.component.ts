@@ -1,6 +1,6 @@
-import { newArray } from '@angular/compiler/src/util';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
+import { FilterManagerService } from '../../../service/filterManager.service';
 
 @Component({
   selector: 'app-level-search',
@@ -17,11 +17,15 @@ export class LevelSearchComponent implements OnInit {
   levelListResult: any[] = []
   checkedLevel: boolean;
   filterName: string;
+  raretyDropDown = {chevronName: "expand_less", state: true};
+  levelArray: any[] = []
+  rarety: any = '';
 
-  constructor() { }
+  constructor(private filterManagerService: FilterManagerService) { }
 
   ngOnInit(): void {
-  
+
+    this.displayLevelList();
   }
 
   levelList: any[] = [
@@ -35,14 +39,26 @@ export class LevelSearchComponent implements OnInit {
     {name: 'Omni', state: false, icon: "★★★★★★★★"}
   ] 
 
+
+
   displayLevelList(): any[] {
-    return this.levelList;
+    this.levelArray = this.levelList
+    const rarety = this.filterManagerService.getFilter('rarety')
+
+   if(rarety !== undefined) {
+    
+      this.levelArray = rarety.raretyArray
+   }
+
+    return this.levelArray;
   }
+
+
 
   selectedLevel(level: any) {
      level.state = !level.state;
-   
-     this.levelList.reduce((levels: any[] = [], levelChange: any = {}) => {
+
+     this.levelArray.reduce((levels: any[] = [], levelChange: any = {}) => {
  
       if(levelChange.state === true) {
         
@@ -53,9 +69,15 @@ export class LevelSearchComponent implements OnInit {
       }  
       return levels
     }, [])
-
+    
     this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult})
-    this.checkeStateLevel(this.levelList);
+    this.checkeStateLevel(this.levelArray);
+
+   let  raretyObject = {
+      raretyArray: this.levelArray
+   }
+
+    this.filterManagerService.setFilter('rarety', raretyObject)
   }
 
    // checked if all the value with state are false
@@ -63,9 +85,20 @@ export class LevelSearchComponent implements OnInit {
     let checker = arr => arr.every(v => v.state === false);
 
     let checkerResult = checker(arrayList)
-  
+     
     if(checkerResult === true) {
+      this.filterManagerService.removeFilter('rarety');
       return this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []})
+    }
+  }
+
+  dropDown = () => {
+    this.raretyDropDown.state =! this.raretyDropDown.state
+    
+    if(this.raretyDropDown.state === false) {
+      this.raretyDropDown.chevronName = "expand_more";
+    } else {
+      this.raretyDropDown.chevronName = "expand_less";
     }
   }
 }
