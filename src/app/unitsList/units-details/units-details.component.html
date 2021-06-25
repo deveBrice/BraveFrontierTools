@@ -1,0 +1,285 @@
+<!--Modifier l'api et rajouter un tableau qui regroupe les titre et description pour la partie: invocation, fusion -->
+<div class="mt-2 ml-2 flex items-center cursor-pointer" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <p class="mr-2 !mb-0">Revenir à la liste des unités</p>
+</div>
+<ng-template ngFor let-unitDetails [ngForOf]="displayUnitDetails$ | async" let-i="index"> 
+    <div class="flex flex-row flex-wrap justify-center md:justify-start"> 
+        <div class="">
+            <div class="w-80 bg-blackCardUnit m-2 rounded-2xl">
+                <div class="flex p-2">
+                    <img src="{{unitDetails.elementPicture.picture}}" alt="{{unitDetails.elementPicture.alt}}">
+                    <img src="{{unitDetails.gender.picture}}" alt="{{unitDetails.gender.alt}}">
+                </div>
+                <div>
+                    <h1 class="text-xl text-center font-bold !m-0 text-{{unitDetails.color}}" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.name}}</h1>
+                </div>
+                <div class="flex justify-between">
+                <img class="ml-4" (mouseenter) ="hoveredDungeonPicture = i"  (mouseleave)="hoveredDungeonPicture = null" src="assets/imgs/anime_fight_icon.png" alt="anime fight icon">
+                <img class="mr-4" (mouseenter) ="hovereArenaPicture = i"  (mouseleave)="hovereArenaPicture = null" src="assets/imgs/arena_fight_icon.png" alt="arena fight icon">
+                </div>
+                <div *ngIf="hoveredDungeonPicture === i" class="relative">
+                    <div class="absolute left-4 top-2">
+                        <div>
+                    <img class="h-48 w-72" src="assets/imgs/fields/dungeon_battle.jpg" alt="donjon nature">
+                    </div>
+                    </div>
+                    <div class="absolute right-16 top-10">
+                    <div *ngFor="let animeBattle of unitDetails.animationBattle">
+                    <img src="{{animeBattle.normalAttack}}" alt="{{animeBattle.altNormalAttack}}">
+                    </div>
+                </div>
+                </div>
+                <div *ngIf="hovereArenaPicture === i" class="relative">
+                <div class="absolute left-4 top-2">
+                    <img class="h-48 w-72" src="assets/imgs/fields/arena.jpg" alt="Arena">
+                </div>
+                <div class="absolute right-16 top-10">
+                    <div *ngFor="let animeBattle of unitDetails.animationBattle">
+                    <img src="{{animeBattle.combatMode}}" alt="{{animeBattle.altCombatMode}}">
+                    </div>
+                </div>
+                </div>
+                <div class="h-48 w-full flex justify-center">
+                    <img class="pb-2" src="{{unitDetails.unit.picture}}" alt="{{unitDetails.unit.alt}}">
+                </div>
+                <mat-divider class="bg-white !mt-5"></mat-divider>
+                <div class="text-center pt-2">
+                    <h2 class="text-white">Invocation</h2>
+                    <p class="text-white">{{unitDetails.summonDescription}}</p>
+                </div>
+                <mat-divider class="bg-white !mt-5"></mat-divider>
+                <div class="text-center pt-2" *ngIf="unitDetails.evolveDescription !== empty">
+                    <h2 class="text-white">Évolution</h2>
+                    <p class="text-white">{{unitDetails.evolveDescription}}</p>
+                </div>
+                <mat-divider class="bg-white !mt-5" *ngIf="unitDetails.evolveDescription !== empty"></mat-divider>
+                <div class="text-center pt-2">
+                    <h2 class="text-white">Fusion</h2>
+                    <p class="text-white">{{unitDetails.fusionDescription}}</p>
+                </div>
+                <mat-divider class="bg-white !mt-5 !mb-5"></mat-divider>
+                <div class="flex justify-between !mb-3">
+                    <h2 class="text-white !ml-4 !mb-0">Histoire</h2>
+                    <p class="text-white text-xl !mr-4 !mb-0 cursor-pointer" (click)="loreDisplay()">{{text}}</p>
+                </div>
+                <div class="flex justify-center" *ngIf="toggle">
+                <p class="w-72 text-center text-white">{{unitDetails.lore}}</p>
+            </div>
+            </div>
+
+            <div class="w-80 bg-blackCardUnit m-2 p-2 rounded-2xl">
+                <div class="flex justify-center text-center">
+                    <div class="text-white mt-3 w-36">
+                        <h3 class="!mb-5">No</h3>
+                        <h3 class="!mb-5">Élément</h3>
+                        <h3 class="!mb-5">Rareté</h3>
+                        <h3 class="!mb-5">Niveau Max</h3>
+                        <h3 class="!mb-5">Coût</h3>
+                        <h3 class="!mb-5">Type Arène</h3>
+                    </div>
+                    <mat-divider class="bg-white !mr-10 !ml-10" [vertical]="true"></mat-divider>
+                    <div class="text-white mt-3 w-36">
+                        <p class="text-lg !mb-5">{{unitDetails.identity.numUnit}}</p>
+                        <p class="text-lg !mb-5">{{unitDetails.identity.element}}</p>
+                        <p class="text-lg !mb-5">{{unitDetails.identity.rarity}}</p>
+                        <p class="text-lg !mb-5">{{unitDetails.identity.maxLevel}}</p>
+                        <p class="text-lg !mb-5">{{unitDetails.identity.cost}}</p>
+                        <p class="text-lg !mb-5">{{unitDetails.identity.arenaType}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-80 bg-blackCardUnit m-2 p-2 rounded-2xl">
+                <div class="">
+                    <h2 class="text-white text-center !m-0">Nb coups/cc crées</h2>
+                </div>
+                <mat-divider class="bg-white !mt-2 !mb-2"></mat-divider>
+                <div class="flex">
+                    <div class="">
+                        <h3 class="text-white pl-8">Coup normal</h3>
+                        <h3 class="text-white pl-16">BB</h3>
+                    </div>
+                    <div class="">
+                        <div class="flex pl-6 pb-4">
+                            <p class="text-white pr-10 !m-0 text-lg">{{unitDetails.hitCountInformation.normalValues.hitCount}}</p>
+                            <p class="text-white !m-0 pr-2 text-lg">{{unitDetails.hitCountInformation.normalValues.cristalGenerated}}</p> 
+                            <img class ="h-4 mt-1.5" src="{{unitDetails.hitCountInformation.normalValues.crystalIcon}}" alt="">
+                        </div>
+                        <div class="flex pl-6">
+                            <p class="text-white pr-10 !m-0 text-lg">{{unitDetails.hitCountInformation.bbValues.hitCount}}</p>
+                            <p class="text-white !m-0 pr-2 text-lg">{{unitDetails.hitCountInformation.bbValues.cristalGenerated}}</p>
+                            <img class ="h-4 mt-1.5" src="{{unitDetails.hitCountInformation.bbValues.crystalIcon}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="flex flex-col w-screen lg:w-auto 2xl:w-140">
+                <div class="h-104 bg-blackCardUnit m-2 p-2 rounded-2xl sm:h-98">
+                    <div class="text-white text-center flex justify-between">
+                        <h3>Stats</h3>
+                        <h3>HP</h3>
+                        <h3>ATK</h3>
+                        <h3>DEF</h3>
+                        <h3>REC</h3>
+                    </div>
+                <div class="flex w-125">
+                <div class="mr-5 sm:mr-0"> 
+                    <div class="text-white flex flex-col justify-between w-26 mr-4 sm:w-32 h-20 !mr-0 md:w-44 xl:w-32">
+                        <h3 class="flex">Base <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/base_icon.png" alt="icone base"></h3>
+                        <h3 class="flex">Seigneur <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/lord_icon.png" alt="icone seigneur"></h3>
+                        <h3 class="flex">Anima <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/anima_icon.png" alt="icone anima"></h3>
+                        <h3 class="flex">Briseur <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/breaker_icon.png" alt="icone briseur"></h3>
+                        <h3 class="flex">Guardien <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/gardian_icon.png" alt="icone gardien"></h3>
+                        <h3 class="flex">Oracle <img class="hidden sm:block w-5 h-5 ml-1 mt-1" src="assets/imgs/types/oracle_icon.png" alt="icone oracle"></h3>
+                        <h3>Rex</h3>
+                        <h3>bonus</h3>
+                    </div>
+                </div>
+
+                <div class="w-full text-center">
+                    
+                    <div class="text-white flex justify-between mb-3 mt-1.5" *ngFor="let st of unitDetails.stats">
+                        
+                        <p class="flex flex-col items-center sm:flex-row-reverse">{{st.hp}}<img class="w-5 h-5 mr-1" *ngIf="st.type === 'Max Bonus'" src="assets/imgs/imps/imp_hp.png" alt=""></p>
+                        <p class="flex flex-col items-center sm:flex-row-reverse">{{st.atk}}<img class="w-5 h-5 mr-1" *ngIf="st.type === 'Max Bonus'" src="assets/imgs/imps/imp_atk.png" alt=""></p>
+                        <p class="flex flex-col items-center sm:flex-row-reverse">{{st.def}}<img class="w-5 h-5 mr-1" *ngIf="st.type === 'Max Bonus'" src="assets/imgs/imps/imp_def.png" alt=""></p>
+                        <p class="flex flex-col items-center sm:flex-row-reverse">{{st.rec}}<img class="w-5 h-5 mr-1" *ngIf="st.type === 'Max Bonus'" src="assets/imgs/imps/imp_rec.png" alt=""></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <div class="h-auto bg-blackCardUnit m-2 rounded-2xl relative">
+            <div class="flex">
+                <div class="bg-gradient-to-r from-bgDarkGray to-bgGray rounded-t-2xl w-32 pl-2">
+                <h2 class="text-white !m-0">Leader Skill</h2>
+                </div>
+                <div class="ml-2">
+                    <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.lsInformations.title}}</h2>
+                </div>
+            </div>
+            <mat-divider class="bg-white"></mat-divider>
+            <div class="text-white text-base w-full">
+                <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.lsInformations.description}}</p>
+            </div>
+        
+                <div class="border-2 text-white w-7 h-7 rounded-full absolute bottom-2 right-2">
+                    <mat-icon class="text-white cursor-pointer" (click)="specialAttackDetails(specialAttackObject.leaderSkill)">{{details.leaderSkill.chevronName}}</mat-icon>
+                </div>
+                <div class="!mb-3" *ngIf="details.leaderSkill.state">
+                    <div class="text-center text-white !mb-6">
+                        <h2>Détails des effets</h2>
+                    </div>
+                    <div class="!mb-6 flex justify-around">
+                        <h3 class="text-white">Nom des éffets</h3>
+                        <h3 class="text-white">Valeur des effets</h3>
+                    </div>
+                    <div class="flex justify-between" *ngFor="let ls of unitDetails.specialsAttacks.lsInformations.lsValueDetails">
+                        <div class="flex text-white w-80 items-center !mb-2">
+                            <img class="h-6 w-6" src="{{ls.icon}}" alt="">
+                            <p class="text-white ml-2 !mb-0">{{ls.effectName}}</p>
+                        </div>
+                        <mat-divider class="bg-white" [vertical]="true"></mat-divider>
+                        <div class="w-80 text-white !mb-2 !ml-2">
+                            <p class="!mb-0">{{ls.effectDescription}}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="h-auto bg-blackCardUnit m-2 rounded-2xl relative">
+            <div class="flex">
+            <div class="bg-gradient-to-r from-bgDarkBlue to-bgBlue rounded-t-2xl w-32 pl-2">
+                <h2 class="text-white !m-0">Brave Burst</h2>
+            </div>
+            <div class="ml-2">
+                <h2 class="!m-0 text" [ngStyle]="{'color': unitDetails.color}">{{unitDetails.specialsAttacks.bbInformations.title}}</h2>
+            </div>
+            </div>
+        <mat-divider class="bg-white"></mat-divider>
+        <div class="text-white text-base w-full">
+            <p class="!ml-1 !mt-1 !mb-0 w-full break-all h-32">{{unitDetails.specialsAttacks.bbInformations.description}}</p>
+        </div>
+            <div class="border-2 text-white w-7 h-7 rounded-full absolute bottom-2 right-2">
+                <mat-icon class="text-white cursor-pointer" (click)="specialAttackDetails(specialAttackObject.braveBurst)">{{details.braveBurst.chevronName}}</mat-icon>
+            </div>
+            <div class="!mb-3" *ngIf="details.braveBurst.state">
+                <div class="text-center text-white !mb-6">
+                    <h2>Détails des effets</h2>
+                </div>
+                <div class="!mb-6 flex justify-around">
+                    <h3 class="text-white">Nom des effets</h3>
+                    <h3 class="text-white">BB niveau 10</h3>
+                </div>
+                <div class="flex justify-between" *ngFor="let bb of unitDetails.specialsAttacks.bbInformations.bbValueDetails">
+                    <div class="flex text-white w-80 items-center">
+                        <img class="h-6 w-6" src="{{bb.icon}}" alt="">
+                        <p class="text-white !mb-0 ml-2">{{bb.effectName}}</p>
+                    </div>
+                    <mat-divider class="bg-white" [vertical]="true"></mat-divider>
+                    <div class="w-80 text-white !mb-0 !ml-2">
+                        <p class="!mb-0">{{bb.effectDescription}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-auto bg-blackCardUnit m-2 rounded-2xl">
+            <div class="!mt-6">
+               <h2 class="text-white text-center !mb-2">Evolutions</h2>
+           </div>
+           <mat-divider class="bg-white"></mat-divider>
+           <div class="flex items-center">
+            <div class="!mt-5 !ml-5">
+                <h3 class="text-white">chaîne:</h3>
+              </div>
+              <div class="flex" *ngFor="let ce of unitDetails.evolves.chainEvolves">
+                  <span><img class="!ml-1 w-8 lg:w-10 !ml-2" src="{{ce.evolve}}" alt="ce.alt"> </span>
+                   
+              </div>
+           </div>
+           <mat-divider class="bg-white"></mat-divider>
+           <div class="flex items-center">
+            <div class="!mt-5 !ml-5">
+                <h3 class="text-white">Matériels:</h3>
+              </div>
+              <div class="flex" *ngFor="let m of unitDetails.evolves.materials">
+                  <span><img class="ml-2 w-8 lg:w-10" src="{{m.icon}}" alt="m.alt"> </span>
+                   
+              </div>
+           </div>
+           <mat-divider class="bg-white"></mat-divider>
+           <div class="flex items-center">
+            <div class="!mt-5 !ml-5">
+                <h3 class="text-white">Coûts:</h3>
+              </div>
+        
+                <div class="flex items-center !mt-2" *ngFor="let co of unitDetails.evolves.cost">
+                    <img class="!ml-2" src="{{co.zelIcon}}" alt="{{co.zelAlt}}">
+                    <p class="text-white !mb-0 !ml-1 text-base">{{co.zelAmount}}</p>
+                    
+                    <img *ngIf="co.karmaAmount !== empty" src="{{co.karmaIcon}}" alt="{{co.karmaAlt}}">
+                    
+                    <p class="text-white !mb-0 !ml-2 text-base" *ngIf="co.karmaAmount !== empty">{{co.karmaAmount}}</p>
+                </div>
+           </div>
+        </div>
+
+        <div class="h-auto bg-blackCardUnit m-2 rounded-2xl">
+          <div class="!mt-6">
+            <h2 class="text-white text-center !mb-2">Comment L' obtenir</h2>
+            <mat-divider class="bg-white"></mat-divider>
+          </div>
+          <div class="!ml-6 !mt-2 !mb-2">
+              <ul class="list-disc" *ngFor="let co of unitDetails.howToObtain">
+                  <li class="text-white text-base">{{co.place}}</li>
+              </ul>
+          </div>
+        </div>
+    </div>
+</div>
+</ng-template>
+<div class="mt-2 ml-2 flex items-center cursor-pointer" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <p class="mr-2 !mb-0">Revenir à la liste des unités</p>
+</div>

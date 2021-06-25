@@ -9,13 +9,20 @@ import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 })
 export class AdvancedSearchComponent implements OnInit {
   @Input() advancedSearch$: Observable<Array<IUnitsList>>;
-  @Output() searchByLevel$ = new EventEmitter<Observable<Array<any>>>();
   @Input() newResultSearch$: Observable<Array<any>>;
+  
+  @Output() filterByOrderUpdate = new EventEmitter<any>();
+  @Output() searchByLevel$ = new EventEmitter<Observable<Array<any>>>();
   @Output() filterByElementsUpdate = new EventEmitter<Observable<Array<any>>>();
+  @Output() filterBySpecialAttackUpdate = new EventEmitter<Observable<Array<any>>>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  filterByOrder = ($event) => {
+    this.filterByOrderUpdate.emit($event)
   }
 
   levelSearchResultEvent($event: Observable<Array<any>>) {
@@ -25,5 +32,9 @@ export class AdvancedSearchComponent implements OnInit {
   filterByElementsEvent = ($event) => {
     this.filterByElementsUpdate.emit($event)
   } 
+
+  filterBySpecialAttack = ($event) => {
+    this.filterBySpecialAttackUpdate.emit($event);
+  }
 
 }

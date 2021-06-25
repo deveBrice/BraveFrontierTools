@@ -11,22 +11,24 @@ import { AdvancedSearchModule } from './advanced-search/advanced-search.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from '../shared/navigation/navigation.component';
-import { UnitsComponent } from './units/units.component';
+import { UnitsListComponent } from './unitsList/unitsList.component';
+import { UnitsDetailsComponent } from './unitsList/units-details/units-details.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 
 import { UnitsListService } from '../service/unitsList.service';
+import { UnitDetailsService } from '../service/unitDetails.service';
 
-import { DisplayPictureDirective } from './units/display-picture.directive';
-
+import { DisplayPictureDirective } from './unitsList/display-picture.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavigationComponent,
-    UnitsComponent,
+    UnitsListComponent,
     DisplayPictureDirective,
     SearchBarComponent,
+    UnitsDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { DisplayPictureDirective } from './units/display-picture.directive';
     FormsModule,
     AdvancedSearchModule
   ],
-  providers: [UnitsListService],
+  providers: [UnitsListService, UnitDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

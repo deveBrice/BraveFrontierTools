@@ -1,0 +1,22 @@
+   {
+        "id": 0,
+        "name": "",
+        "elementPicture": {},
+        "gender": {},
+        "unit": {},
+        "summonDescrimtion": "",
+        "fusionDescription": "",
+        "lore": "",
+        "identity": {},
+        "nbCristalsGenerate":{},
+        "state": [
+           {}
+        ],
+        "specialsAttacks": [
+            {}
+        ],
+        "evolves": [
+            {}
+        ],
+        "howToObtain":{}
+    }

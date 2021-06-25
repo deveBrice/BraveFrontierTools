@@ -1,11 +1,15 @@
 <div>
-    <div class="">
-        <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Elements</h2>
-        <mat-divider class="bg-white"></mat-divider>
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Elements</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{elementDropDown.chevronName}}</mat-icon>
+        </div>
     </div>
-    <div class="flex flex-col">
-        <div *ngFor="let el of displayElementList" class="checkbox-custom {{el.elementPicture}}">
-            <mat-checkbox class="ml-5  mt-4" [(ngModel)]="el.state" (change)="selectedElement($event)"> 
+    <div class="flex flex-col" *ngIf="elementDropDown.state">
+        <div *ngFor="let el of elementsArray" class="checkbox-custom {{el.elementPicture}}">
+            <mat-checkbox class="ml-1 mt-4" [(ngModel)]="el.state" (change)="selectedElement($event)"> 
                 <span class="text-white !mb-0 ml-2 text-lg"> {{el.name}}</span>  
             </mat-checkbox>
        </div>

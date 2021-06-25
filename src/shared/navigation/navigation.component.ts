@@ -18,8 +18,8 @@ activeLinkIndex = -1;
         path: '/'
       },
       {
-        label: 'Unités',
-        path: '/units'
+        label: 'Listes des unités',
+        path: '/unitsList'
       }
     ]
   }
