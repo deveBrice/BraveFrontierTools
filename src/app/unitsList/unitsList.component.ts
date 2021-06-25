@@ -6,7 +6,7 @@ import { UnitDetailsService } from '../../service/unitDetails.service'
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 import { filter, map, take, distinctUntilChanged } from 'rxjs/operators';
 import { Router } from '@angular/router';
-
+import { KeyValue } from '@angular/common'
 
 @Component({
   selector: 'app-units-list',
@@ -22,7 +22,11 @@ export class UnitsListComponent implements OnInit, OnDestroy {
    filterListActivated$ = of({});
    unitsListResult$: Observable<IUnitsList[]>
    obj = {}
+   chain:string = '';
+   unitsListArray = [];
 
+
+   
   constructor(private unitsListService: UnitsListService, private router: Router, private unitDetailsService: UnitDetailsService ) {}
 
   ngOnInit(): void {
@@ -80,6 +84,9 @@ export class UnitsListComponent implements OnInit, OnDestroy {
     this.globaleFilter($event, this.filterListActivated$)
   }
 
+  filterByOrderUpdate = ($event: any) => {
+    this.globaleFilter($event, this.filterListActivated$)
+  }
 
   searchByLevelEvent = ($event: any) => {
      this.globaleFilter($event, this.filterListActivated$)
@@ -91,9 +98,19 @@ export class UnitsListComponent implements OnInit, OnDestroy {
   }
 
   filterBySpecialAttackUpdate = ($event) => {
-    //console.log($event)
     this.globaleFilter($event, this.filterListActivated$);
   }
+
+ sortByName = (object: any) => {
+  this.unitsListArray.push(object)
+            
+  this.unitsListArray.sort(function(a,b){
+
+    return a.name.localeCompare(b.name)
+  })
+
+   return this.unitsListArray;
+ }
 
   //Combine all the filters and return one new unitsList containing the filter applicable
   globaleFilter = (newFilter: any, filterListActivated$: Observable<any>) => {
@@ -106,7 +123,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
       const checkedFilterExist = Object.keys(fa).map((check) => check).indexOf(newFilter.filterName)
        if(checkedFilterExist === -1) {
          fa[newFilter.filterName] = newFilter.newValue;
-
+         
        } else {
         delete fa[fa.filterName];
         fa[newFilter.filterName] = newFilter.newValue;
@@ -119,6 +136,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
     //remove the filter current of the filter list if he is emptty
    const removeFilter$: Observable<any> = registerFilter$.pipe (
     map(res => {
+      
        if(res[newFilter.filterName] === "" || res[newFilter.filterName].length === 0) {
         delete res[newFilter.filterName]
        }
@@ -136,8 +154,10 @@ export class UnitsListComponent implements OnInit, OnDestroy {
   )
 
 
-  const unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$).pipe(
+ 
+  let unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$).pipe(
     map(([initialUnitsList, removeFilter, unitDetails]) => 
+    
     initialUnitsList.filter (
       init => {
        
@@ -146,11 +166,12 @@ export class UnitsListComponent implements OnInit, OnDestroy {
         }
 
          for(let rf in removeFilter) {
-
           let checkboxFilter = false;
           let searchUnitName = false;
           let searchUnitDetails = false;
- 
+          let alphabetical = false;
+          let numero = false;
+          
       
           if(Array.isArray(removeFilter[rf])) {
              if(removeFilter[rf].includes(init[rf])){
@@ -171,10 +192,19 @@ export class UnitsListComponent implements OnInit, OnDestroy {
                 searchUnitDetails = true;
               }
             }
+            
+           
+              if(removeFilter[rf] === "name") {
+                  alphabetical = true
+              }
+
+   
           
-          
+              if(removeFilter[rf] === "numUnit") {
+                  numero = true
+               }
         
-           if(checkboxFilter === false && searchUnitName === false && searchUnitDetails === false) {
+           if(checkboxFilter === false && searchUnitName === false && searchUnitDetails === false && alphabetical === false && numero === false) {
       
               return false
             
@@ -187,9 +217,42 @@ export class UnitsListComponent implements OnInit, OnDestroy {
       })) 
   )
 
+   unitsFilter$ = combineLatest(unitsFilter$, removeFilter$).pipe(
+    map(([unitsFilter, removeFilter]) => {
+        for(let rf in removeFilter) {
+          if(removeFilter[rf] === "name") {
+             unitsFilter.sort(function(a, b) {
+               return a.name.localeCompare(b.name)
+             })
+          }
+        }
+        return unitsFilter;
+      } 
+    )
+  )
+
+  unitsFilter$ = combineLatest(unitsFilter$, removeFilter$).pipe(
+    map(([unitsFilter, removeFilter]) => {
+        for(let rf in removeFilter) {
+          if(removeFilter[rf] === "numUnit") {
+             unitsFilter.sort(function(a, b) {
+               return a.numUnit - b.numUnit
+             })
+          }
+        }
+        return unitsFilter;
+      } 
+    )
+  )
+
+
+ 
+
+  
+
   unitsFilter$.subscribe(
     unitsFilter => {
-      console.log(unitsFilter)
+   //   console.log(unitsFilter)
        this.unitsListService.behaviorSubjectUpdateUnitsList$.next(unitsFilter)
     }
   )

@@ -203,3 +203,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .checkbox-custom-BB .mat-ripple-element {
   @apply bg-bgDarkBlue #{!important};  
 }
+
+//order search
+/*.order-custom-number .mat-checkbox-checked
+  .mat-checkbox-background, .mat-checkbox-indeterminate {
+    @apply bg-blue-500;
+}*/
+
+.order-custom .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  @apply border-blue-500;
+}
+
+.order-custom .mat-radio-button.mat-accent .mat-radio-inner-circle{
+  @apply text-blue-500;
+  @apply bg-blue-500;
+}
+
+.order-custom .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  @apply bg-blue-500;
+}

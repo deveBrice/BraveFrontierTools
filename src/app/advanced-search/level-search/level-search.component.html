@@ -1,12 +1,16 @@
 <div class="">
-    <div class="">
-        <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Niveaux</h2>
-        <mat-divider class="bg-white"></mat-divider>
-    </div>
-    <div class="mt-4">
-        <ng-template ngFor let-level [ngForOf]="displayLevelList()">
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Rareté</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{raretyDropDown.chevronName}}</mat-icon>
+        </div>
+   </div>
+    <div class="mt-2" *ngIf="raretyDropDown.state">
+        <ng-template ngFor let-level [ngForOf]="this.levelArray">
             <div class="flex items-center">
-                <div class="ml-4">
+                <div class="ml-1">
                     <button class="focus:outline-none" mat-icon-button (click)="selectedLevel(level)" id="test">
                         <mat-icon
                                 *ngIf="level.state === true"

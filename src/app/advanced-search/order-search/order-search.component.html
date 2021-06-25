@@ -1,0 +1,19 @@
+<div class="mt-4">
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Ordre</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{orderDropDown.chevronName}}</mat-icon>
+        </div>
+    </div>
+    <div *ngIf="orderDropDown.state">
+        <form [formGroup]="orderForm" class="mt-3 ml-1 order-custom">
+            <mat-radio-group class="ml-1 mb-3 flex flex-col" formControlName="order" (change)="orderChange($event)">
+                <mat-radio-button class="mb-3" value="numUnit"> <span class="text-white text-lg">Numéros</span></mat-radio-button>
+                <mat-radio-button value="name"> <span class="text-white text-lg">Alphabétique</span></mat-radio-button>
+            </mat-radio-group>
+        </form>
+    </div>
+    
+</div>

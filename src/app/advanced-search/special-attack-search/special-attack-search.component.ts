@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { map } from 'rxjs/operators'; 
+import { FilterManagerService } from '../../../service/filterManager.service';
 
 @Component({
   selector: 'app-special-attack-search',
@@ -13,10 +14,10 @@ export class SpecialAttackSearchComponent implements OnInit {
   specialAttackForm: FormGroup;
   formArray: any [] = [];
   keyApiName: string;
-
   @Output() filterBySpecialAttack = new EventEmitter<any>()
+  specialAttackDropDown = {chevronName: "expand_less", state: true};
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private filterManagerService: FilterManagerService) { 
     this.displaySpecialAttackForm()
   }
 
@@ -29,6 +30,13 @@ export class SpecialAttackSearchComponent implements OnInit {
       LS: [false],
       BB: [false]
     })
+
+    const specialAttack = this.filterManagerService.getFilter('specialAttack')
+
+    if(specialAttack !== undefined) {
+     
+       this.specialAttackForm = specialAttack.formGroup;
+    }
   }
 
 
@@ -50,6 +58,10 @@ selectedSpecialAttack = () => {
         }, [])
         
         this.checkeStateElement(res) 
+          let specialAttackObject = {
+              formGroup: this.specialAttackForm
+          }
+          this.filterManagerService.setFilter('specialAttack', specialAttackObject)
       })
     )
   
@@ -63,8 +75,19 @@ selectedSpecialAttack = () => {
     let checkerResult = checker(arrayList)
    
     if(checkerResult === true) {
+      this.filterManagerService.removeFilter('specialAttack');
      return this.filterBySpecialAttack.emit({from: 'unitDetails', type: 'checkbox', keyApi: 'specialsAttacks', filterName: 'specialsAttacks', newValue: []})
     }
+  }
+
+  dropDown = () => {
+    this.specialAttackDropDown.state =! this.specialAttackDropDown.state
+    
+      if(this.specialAttackDropDown.state === false) {
+        this.specialAttackDropDown.chevronName = "expand_more";
+      } else {
+        this.specialAttackDropDown.chevronName = "expand_less";
+      }
   }
 
 }

@@ -47,7 +47,21 @@
             {"type": "Max Bonus", "hp": "+400(×8)", "atk": "+160(×8)","def": "+80(×4)","rec": "+80(×4)"}
         ],
         "specialsAttacks": {
-           
+          "lsInformations": {
+            "title":"Puissante esprit de feu",
+            "description": "Augmente la puissance d'attaque des types feu",
+             "lsValueDetails": [
+                      {
+                         "icon": "assets/imgs/buffs/buff_atk_elementary/fire_atk_up.png", 
+                         "alt": "Augmentation de l'attaque élément feu",
+                         "effectName": "Augmentation de l'attaque de feu", 
+                         "effectDescription": "Attaque de feu +25%",
+                         "attackElementary": "fire_atk_up",
+                         "valueDamage": 25
+                      }
+                ]  
+            
+        },
 
            "bbInformations": {
               "title":"Flamboiement",
