@@ -19,7 +19,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
    unitsList$: Observable<IUnitsList[]>;
    initialUnitsList$: Observable<Array<IUnitsList>> = this.unitsListService.getUnitsList();
    behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
-   filterListActivated$ = of({});
+   
    unitsListResult$: Observable<IUnitsList[]>
    obj = {}
    chain:string = '';
@@ -81,24 +81,24 @@ export class UnitsListComponent implements OnInit, OnDestroy {
 
 
   searchByInputTextEvent = ($event: any) => {
-    this.globaleFilter($event, this.filterListActivated$)
+    this.globaleFilter($event, this.unitsListService.filterListActivated$)
   }
 
   filterByOrderUpdate = ($event: any) => {
-    this.globaleFilter($event, this.filterListActivated$)
+    this.globaleFilter($event, this.unitsListService.filterListActivated$)
   }
 
   searchByLevelEvent = ($event: any) => {
-     this.globaleFilter($event, this.filterListActivated$)
+     this.globaleFilter($event, this.unitsListService.filterListActivated$)
   }
 
 
   searchByElementEvent = ($event) => {
-      this.globaleFilter($event, this.filterListActivated$);
+      this.globaleFilter($event, this.unitsListService.filterListActivated$);
   }
 
   filterBySpecialAttackUpdate = ($event) => {
-    this.globaleFilter($event, this.filterListActivated$);
+    this.globaleFilter($event, this.unitsListService.filterListActivated$);
   }
 
  sortByName = (object: any) => {
