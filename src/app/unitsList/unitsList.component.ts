@@ -7,6 +7,7 @@ import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 import { filter, map, take, distinctUntilChanged } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { KeyValue } from '@angular/common'
+import { LoadingDataManagerService } from 'src/service/loadingDataManager.service';
 
 @Component({
   selector: 'app-units-list',
@@ -25,9 +26,12 @@ export class UnitsListComponent implements OnInit, OnDestroy {
    chain:string = '';
    unitsListArray = [];
 
-
    
-  constructor(private unitsListService: UnitsListService, private router: Router, private unitDetailsService: UnitDetailsService ) {}
+  constructor(private unitsListService: UnitsListService, 
+              private router: Router, 
+              private unitDetailsService: UnitDetailsService, 
+              private loadingDataManagerService: LoadingDataManagerService) {
+  }
 
   ngOnInit(): void {
     this.displayUnitsList();
@@ -74,10 +78,20 @@ export class UnitsListComponent implements OnInit, OnDestroy {
   }
 
   displayUnitsList = () => {
-
-    this.unitsList$ = this.unitsListService.unitsList$;
     
+    this.unitsList$ = this.unitsListService.unitsList$;
   }
+
+
+
+  onScroll = () => {
+    this.loadingDataManagerService.loadMore()
+     console.log("test")
+  }
+
+
+
+
 
 
   searchByInputTextEvent = ($event: any) => {
@@ -162,7 +176,8 @@ export class UnitsListComponent implements OnInit, OnDestroy {
       init => {
        
         if(Object.keys(removeFilter).length === 0) {
-          return initialUnitsList;
+      
+          return initialUnitsList
         }
 
          for(let rf in removeFilter) {
@@ -189,6 +204,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
             for(let details in unitDetails[init.id][rf]) {
           
               if(removeFilter[rf].includes(details)) {
+                this.loadingDataManagerService.loadMore()
                 searchUnitDetails = true;
               }
             }
@@ -211,7 +227,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
            }
 
          }
-
+       
         return true
          
       })) 
@@ -226,6 +242,7 @@ export class UnitsListComponent implements OnInit, OnDestroy {
              })
           }
         }
+        this.loadingDataManagerService.loadMore()
         return unitsFilter;
       } 
     )
@@ -252,8 +269,11 @@ export class UnitsListComponent implements OnInit, OnDestroy {
 
   unitsFilter$.subscribe(
     unitsFilter => {
-   //   console.log(unitsFilter)
-       this.unitsListService.behaviorSubjectUpdateUnitsList$.next(unitsFilter)
+
+      const test = this.loadingDataManagerService.dataList(unitsFilter)
+       //  console.log(test)
+      this.unitsListService.behaviorSubjectUpdateUnitsList$.next(test)
+    
     }
   )
  }

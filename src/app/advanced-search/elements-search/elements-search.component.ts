@@ -27,9 +27,9 @@ elementsArray: any[] = [];
     {name: 'Feu', state: false, elementPicture: 'checkbox-custom-fire'},
     {name: 'Eau', state: false, elementPicture: 'checkbox-custom-water'},
     {name: 'Terre', state: false, elementPicture: 'checkbox-custom-earth'},
-    {name: 'Foudre', state: false, elementPicture: 'checkbox-custom-lightning'},
+    {name: 'Foudre', state: false, elementPicture: 'checkbox-custom-thunder'},
     {name: 'Lumière', state: false, elementPicture: 'checkbox-custom-light'},
-    {name: 'Ténèbre', state: false, elementPicture: 'checkbox-custom-dark'}
+    {name: 'Ténèbres', state: false, elementPicture: 'checkbox-custom-dark'}
   ] 
 
  displayElementList = () => {

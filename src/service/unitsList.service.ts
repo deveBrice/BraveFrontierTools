@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { IUnitsList } from '../interface/unitsList/iUnitsList.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Subscription, of } from 'rxjs'
-
+import { LoadingDataManagerService } from './loadingDataManager.service';
 
 @Injectable()
 
@@ -12,13 +12,16 @@ export class UnitsListService implements OnDestroy {
     unitsList$: Observable<Array<IUnitsList>>;
     behaviorSubjectUpdateUnitsList$: BehaviorSubject<Array<IUnitsList>>;
     subscription$: Subscription;
-    currentFilter = {array: []}
+    //currentFilter = {array: []}
     filterListActivated$ = of({});
 
-    constructor(private httpClient: HttpClient){
+
+
+    constructor(private httpClient: HttpClient, private loadingDataManagerService: LoadingDataManagerService){
         this.behaviorSubjectUpdateUnitsList$ = <BehaviorSubject<Array<IUnitsList>>> new BehaviorSubject([]);
         this.unitsList$ = this.behaviorSubjectUpdateUnitsList$.asObservable()
         this.subscribeUnitsList()
+        
     }
 
     getUnitsList = () => {
@@ -28,11 +31,12 @@ export class UnitsListService implements OnDestroy {
     subscribeUnitsList = () => {
       this.subscription$ = this.getUnitsList().subscribe(
             unitsList => {
-              this.currentFilter.array = unitsList
-              return this.behaviorSubjectUpdateUnitsList$.next(unitsList)
+              const test = this.loadingDataManagerService.dataList(unitsList)
+              return this.behaviorSubjectUpdateUnitsList$.next(test)
             }
         )
     }
+
 
     updateUnitsList = (unitsList$: Observable<any[]>) => {
    
@@ -44,6 +48,7 @@ export class UnitsListService implements OnDestroy {
        )
        
     }
+
 
     ngOnDestroy(){
       this.subscription$.unsubscribe();
