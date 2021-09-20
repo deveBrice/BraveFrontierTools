@@ -12,6 +12,7 @@ import { OrderSearchComponent } from './order-search/order-search.component';
 
 import { UnitsListService } from '../../service/unitsList.service';
 import { FilterManagerService } from '../../service/filterManager.service';
+import { LoadingDataManagerService } from '../../service/loadingDataManager.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { FilterManagerService } from '../../service/filterManager.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UnitsListService, FilterManagerService],
+  providers: [UnitsListService, FilterManagerService, LoadingDataManagerService],
   bootstrap: [AdvancedSearchComponent],
   exports:[AdvancedSearchComponent, LevelSearchComponent, ElementsSearchComponent]
 })

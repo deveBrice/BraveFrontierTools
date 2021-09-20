@@ -16,10 +16,12 @@
     </div>
 
 
-<div class="h-full flex flex-wrap justify-center md:justify-start">
+<div class="h-full flex flex-wrap justify-center md:justify-start" infiniteScroll
+[infiniteScrollDistance]="0.1"
+(scrolled)="onScroll()">
   <ng-template ngFor let-unitsList [ngForOf]="unitsList$ | async" let-i="index"> 
  
-   <mat-card class="h-120 w-74 bg-blackCardUnit m-2 cursor-pointer" (click)="selectedUnit(unitsList)">
+   <mat-card class="h-117 w-77 bg-blackCardUnit m-2 cursor-pointer" (click)="selectedUnit(unitsList)">
      <mat-card-header class="w-full flex justify-center">
       <div class="w-60 flex justify-between">
         <div class="h-6 w-6">
@@ -83,9 +85,14 @@
          </div>
       </div>
       <mat-divider class="bg-white"></mat-divider>
-      <div class="grid grid-cols-16 grid-rows-10 overflow-custom p-2">
-        <div class="pr-1" *ngFor="let e of unitsList.chainsEvolves">
-          <img [ngClass]="{'border border-{{unitsList.color}}' : unitsList.name ===  e.alt}" class="h-10 w-10 p-0.5" src="{{e.evolve}}" alt="{{e.alt}}">
+      <!--grid-cols-16 grid-rows-10-->
+      <div class="grid grid-cols-7 grid-rows-10 overflow-custom pt-3">
+        <div class="pr-1" *ngFor="let e of unitsList.chainsEvolves; let ce = index">
+          <img (mouseenter)="unitCurrent = ce" (mouseleave)="unitCurrent = null" [ngClass]="{'border border-{{unitsList.color}}' : unitsList.name === e.alt}" class="h-10 w-10 p-0.5" src="{{e.evolve}}" alt="{{e.alt}}">
+          <div *ngIf="unitsList.id === i">
+            <span *ngIf="unitCurrent === ce">{{e.alt}}</span>  
+          </div>
+             
         </div>
       </div>
     </mat-card-content>

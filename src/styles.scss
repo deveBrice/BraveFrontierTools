@@ -18,6 +18,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   @apply overflow-x-auto;
 }
 
+.tooltipUnitName {
+  @apply invisible;
+}
+
 /* width */
 ::-webkit-scrollbar {
   @apply h-2.5;
@@ -110,17 +114,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-.checkbox-custom-lightning .mat-checkbox-frame { 
-  @apply border-lightningColor;
+.checkbox-custom-thunder .mat-checkbox-frame { 
+  @apply border-thunderColor;
 }
 
-.checkbox-custom-lightning .mat-checkbox-checked
+.checkbox-custom-thunder .mat-checkbox-checked
   .mat-checkbox-background, .mat-checkbox-indeterminate {
-    @apply bg-lightning-picture;
+    @apply bg-thunder-picture;
 }
 
-.checkbox-custom-lightning .mat-ripple-element {
-  @apply bg-lightningColor #{!important}; 
+.checkbox-custom-thunder .mat-ripple-element {
+  @apply bg-thunderColor #{!important}; 
 }
 
 
