@@ -3,11 +3,11 @@ import { Observable } from 'rxjs';
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 
 @Component({
-  selector: 'app-advanced-search',
-  templateUrl: './advanced-search.component.html',
-  styleUrls: ['./advanced-search.component.scss']
+  selector: 'app-search-base-filter',
+  templateUrl: './search-base-filter.component.html',
+  styleUrls: ['./search-base-filter.component.scss']
 })
-export class AdvancedSearchComponent implements OnInit {
+export class SearchBaseFilterComponent implements OnInit {
   @Input() advancedSearch$: Observable<Array<IUnitsList>>;
   @Input() newResultSearch$: Observable<Array<any>>;
   

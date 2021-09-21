@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SaveFilterManagerService } from '../../../service/saveFilterManager.service';
 import { FilterManagerService } from '../../../service/filterManager.service';
+import { UnitsListService } from '../../../service/unitsList.service';
 
 @Component({
   selector: 'app-level-search',
@@ -21,7 +23,12 @@ export class LevelSearchComponent implements OnInit {
   levelArray: any[] = []
   rarety: any = '';
 
-  constructor(private filterManagerService: FilterManagerService) { }
+  constructor(
+    private saveFilterManagerService: SaveFilterManagerService,
+    private filterManagerService: FilterManagerService,
+    private unitsListService: UnitsListService
+    
+    ) { }
 
   ngOnInit(): void {
 
@@ -43,7 +50,7 @@ export class LevelSearchComponent implements OnInit {
 
   displayLevelList(): any[] {
     this.levelArray = this.levelList
-    const rarety = this.filterManagerService.getFilter('rarety')
+    const rarety = this.saveFilterManagerService.getFilter('rarety')
 
    if(rarety !== undefined) {
     
@@ -70,14 +77,14 @@ export class LevelSearchComponent implements OnInit {
       return levels
     }, [])
     
-    this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult})
+    this.filterManagerService.globaleFilter({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: this.levelListResult}, this.unitsListService.filterListActivated$)
     this.checkeStateLevel(this.levelArray);
 
    let  raretyObject = {
       raretyArray: this.levelArray
    }
 
-    this.filterManagerService.setFilter('rarety', raretyObject)
+    this.saveFilterManagerService.setFilter('rarety', raretyObject)
   }
 
    // checked if all the value with state are false
@@ -87,8 +94,11 @@ export class LevelSearchComponent implements OnInit {
     let checkerResult = checker(arrayList)
      
     if(checkerResult === true) {
-      this.filterManagerService.removeFilter('rarety');
-      return this.levelSearchResult$.emit({from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []})
+      this.saveFilterManagerService.removeFilter('rarety');
+      return this.filterManagerService.globaleFilter(
+        {from: 'unitsList', type: 'checkbox', keyApi: 'level', filterName: 'level', newValue: []}, 
+        this.unitsListService.filterListActivated$
+        )
     }
   }
 

@@ -1,7 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { map } from 'rxjs/operators'; 
+import { SaveFilterManagerService } from '../../../service/saveFilterManager.service';
 import { FilterManagerService } from '../../../service/filterManager.service';
+import { UnitsListService } from '../../../service/unitsList.service';
 
 @Component({
   selector: 'app-special-attack-search',
@@ -17,7 +19,11 @@ export class SpecialAttackSearchComponent implements OnInit {
   @Output() filterBySpecialAttack = new EventEmitter<any>()
   specialAttackDropDown = {chevronName: "expand_less", state: true};
 
-  constructor(private fb: FormBuilder, private filterManagerService: FilterManagerService) { 
+  constructor(private fb: FormBuilder,
+              private savefilterManagerService: SaveFilterManagerService,
+              private filterManagerService: FilterManagerService,
+              private unitsListService: UnitsListService
+              ) { 
     this.displaySpecialAttackForm()
   }
 
@@ -31,7 +37,7 @@ export class SpecialAttackSearchComponent implements OnInit {
       BB: [false]
     })
 
-    const specialAttack = this.filterManagerService.getFilter('specialAttack')
+    const specialAttack = this.savefilterManagerService.getFilter('specialAttack')
 
     if(specialAttack !== undefined) {
      
@@ -52,7 +58,7 @@ selectedSpecialAttack = () => {
         
            if(specialAttackObject[sao]) {
              specialAttackList.push(sao.toLowerCase() + 'Informations')
-             this.filterBySpecialAttack.emit({from: 'unitDetails', type: 'checkbox', keyApi: 'specialsAttacks', filterName: 'specialsAttacks', newValue: specialAttackList})
+             this.filterManagerService.globaleFilter({from: 'unitDetails', type: 'checkbox', keyApi: 'specialsAttacks', filterName: 'specialsAttacks', newValue: specialAttackList}, this.unitsListService.filterListActivated$)
            } 
          }
         }, [])
@@ -61,7 +67,7 @@ selectedSpecialAttack = () => {
           let specialAttackObject = {
               formGroup: this.specialAttackForm
           }
-          this.filterManagerService.setFilter('specialAttack', specialAttackObject)
+          this.savefilterManagerService.setFilter('specialAttack', specialAttackObject)
       })
     )
   
@@ -75,8 +81,8 @@ selectedSpecialAttack = () => {
     let checkerResult = checker(arrayList)
    
     if(checkerResult === true) {
-      this.filterManagerService.removeFilter('specialAttack');
-     return this.filterBySpecialAttack.emit({from: 'unitDetails', type: 'checkbox', keyApi: 'specialsAttacks', filterName: 'specialsAttacks', newValue: []})
+      this.savefilterManagerService.removeFilter('specialAttack');
+     return this.filterManagerService.globaleFilter({from: 'unitDetails', type: 'checkbox', keyApi: 'specialsAttacks', filterName: 'specialsAttacks', newValue: []}, this.unitsListService.filterListActivated$)
     }
   }
 

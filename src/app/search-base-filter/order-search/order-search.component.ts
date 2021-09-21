@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SaveFilterManagerService } from '../../../service/saveFilterManager.service';
 import { FilterManagerService } from '../../../service/filterManager.service';
+import { UnitsListService } from '../../../service/unitsList.service';
 
 @Component({
   selector: 'app-order-search',
@@ -15,7 +17,12 @@ export class OrderSearchComponent implements OnInit {
   @Output() filterByOrder = new EventEmitter<any>()
   orderDropDown = {chevronName: "expand_less", state: true};
  
-  constructor(private fb: FormBuilder, private filterManagerService: FilterManagerService) { }
+  constructor(
+    private fb: FormBuilder, 
+    private saveFilterManagerService: SaveFilterManagerService,
+    private filterManagerService: FilterManagerService,
+    private unitsListService: UnitsListService
+    ) { }
   
 
   ngOnInit(): void {
@@ -36,20 +43,18 @@ export class OrderSearchComponent implements OnInit {
     }
     
     
-    const order = this.filterManagerService.setSaveFilterList('orderForm', orderFormObject)
+    const order = this.saveFilterManagerService.setSaveFilterList('orderForm', orderFormObject)
     if(order !== 'saved') {
      this.orderForm = order.formGroup
      
     }
   }
 
- 
- 
-
-
   orderChange = (orderName: any) => {
-   
-     this.filterByOrder.emit({from: 'unitList', type: 'radio', keyApi: orderName.value, filterName: 'order', newValue: orderName.value})
+     this.filterManagerService.globaleFilter(
+       {from: 'unitList', type: 'radio', keyApi: orderName.value, filterName: 'order', newValue: orderName.value}, 
+       this.unitsListService.filterListActivated$
+       )
   }
 
   dropDown = () => {
@@ -61,7 +66,4 @@ export class OrderSearchComponent implements OnInit {
       this.orderDropDown.chevronName = "expand_less";
     }
   }
-
-
-
 }
