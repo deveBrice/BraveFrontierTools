@@ -1,18 +1,12 @@
 
 <div class="h-auto">
   <div class="pt-5 flex justify-center md:justify-start ml-2">
-    <app-search-bar (resultSearchTextField$)="searchByInputTextEvent($event)"></app-search-bar>
+    <app-search-bar></app-search-bar>
   </div>
   <div class="flex flex-col lg:flex-row">
  
     <div>
-      <app-advanced-search 
-      (searchByLevel$)="searchByLevelEvent($event)" 
-      (filterByElementsUpdate)="searchByElementEvent($event)"
-      (filterBySpecialAttackUpdate)="filterBySpecialAttackUpdate($event)"
-      (filterByOrderUpdate)="filterByOrderUpdate($event)">
-      
-    </app-advanced-search>
+      <app-search-base-filter></app-search-base-filter> 
     </div>
 
 

@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { SaveFilterManagerService } from '../../../service/saveFilterManager.service';
 import { FilterManagerService } from '../../../service/filterManager.service';
+import { UnitsListService } from '../../../service/unitsList.service';
 
 @Component({
   selector: 'app-elements-search',
@@ -17,7 +19,11 @@ elementDropDown = {chevronName: "expand_less", state: true};
 elementsArray: any[] = [];
 @Output() filterByElements = new EventEmitter<any>();
    
-  constructor(private filterManagerService: FilterManagerService) { }
+  constructor(
+    private saveFilterManagerService: SaveFilterManagerService,
+    private filterManagerService: FilterManagerService,
+    private unitsListService: UnitsListService
+    ) { }
 
   ngOnInit(): void {
    this.displayElementList()
@@ -34,7 +40,7 @@ elementsArray: any[] = [];
 
  displayElementList = () => {
    this.elementsArray = this.elementsList
-   const element = this.filterManagerService.getFilter('element')
+   const element = this.saveFilterManagerService.getFilter('element')
 
    if(element !== undefined) {
     
@@ -55,14 +61,17 @@ elementsArray: any[] = [];
 
      return elementsList;
     }, [])
-    this.filterByElements.emit({from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult})
+    this.filterManagerService.globaleFilter(
+    {from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult}, 
+    this.unitsListService.filterListActivated$
+    )
 
     this.checkeStateElement(this.elementsArray) 
     let  elementObject = {
       elementArray: this.elementsArray
    }
 
-    this.filterManagerService.setFilter('element', elementObject)
+    this.saveFilterManagerService.setFilter('element', elementObject)
   }
 
      // checked if all the value with state are false
@@ -72,8 +81,8 @@ elementsArray: any[] = [];
       let checkerResult = checker(arrayList)
     
       if(checkerResult === true) {
-        this.filterManagerService.removeFilter('element');
-       return this.filterByElements.emit({from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: []})
+        this.saveFilterManagerService.removeFilter('element');
+       return this.filterManagerService.globaleFilter({from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: []}, this.unitsListService.filterListActivated$)
       }
     }
 

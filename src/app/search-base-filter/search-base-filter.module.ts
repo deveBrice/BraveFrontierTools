@@ -4,19 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MaterialModule } from '../../shared/material-module/material.module';
 
-import { AdvancedSearchComponent } from './advanced-search.component';
+import { SearchBaseFilterComponent } from './search-base-filter.component';
 import { LevelSearchComponent } from './level-search/level-search.component';
 import { ElementsSearchComponent } from './elements-search/elements-search.component';
 import { SpecialAttackSearchComponent } from './special-attack-search/special-attack-search.component';
 import { OrderSearchComponent } from './order-search/order-search.component';
 
 import { UnitsListService } from '../../service/unitsList.service';
-import { FilterManagerService } from '../../service/filterManager.service';
+import { SaveFilterManagerService } from '../../service/saveFilterManager.service';
 import { LoadingDataManagerService } from '../../service/loadingDataManager.service';
+import { FilterManagerService } from '../../service/filterManager.service';
 
 @NgModule({
   declarations: [
-    AdvancedSearchComponent,
+    SearchBaseFilterComponent,
     LevelSearchComponent,
     ElementsSearchComponent,
     SpecialAttackSearchComponent,
@@ -29,8 +30,8 @@ import { LoadingDataManagerService } from '../../service/loadingDataManager.serv
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UnitsListService, FilterManagerService, LoadingDataManagerService],
-  bootstrap: [AdvancedSearchComponent],
-  exports:[AdvancedSearchComponent, LevelSearchComponent, ElementsSearchComponent]
+  providers: [UnitsListService, SaveFilterManagerService, LoadingDataManagerService, FilterManagerService],
+  bootstrap: [SearchBaseFilterComponent],
+  exports:[SearchBaseFilterComponent, LevelSearchComponent, ElementsSearchComponent]
 })
 export class AdvancedSearchModule { }

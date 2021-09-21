@@ -2,7 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChange
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { SaveFilterManagerService } from '../../service/saveFilterManager.service';
 import { FilterManagerService } from '../../service/filterManager.service';
+import { UnitsListService } from '../../service/unitsList.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -18,7 +20,11 @@ export class SearchBarComponent implements OnInit {
   @Input() newResultSearch$: Observable<Array<any>>;
   searchApi$: Observable<Array<any>>;
 
-  constructor(private fb: FormBuilder, private filterManagerService: FilterManagerService) {
+  constructor(private fb: FormBuilder, 
+              private savefilterManagerService: SaveFilterManagerService,
+              private filterManagerService: FilterManagerService,
+              private unitsListService: UnitsListService
+              ) {
     this.displaySearchBar();
    }
   
@@ -32,7 +38,7 @@ export class SearchBarComponent implements OnInit {
       "search":[ '',[Validators.required, Validators.maxLength(100)]]
     })
 
-    const unitText = this.filterManagerService.getFilter('unitText')
+    const unitText = this.savefilterManagerService.getFilter('unitText')
 
     if(unitText !== undefined) {
      
@@ -51,10 +57,17 @@ export class SearchBarComponent implements OnInit {
     let unitTextObject = {
        formGroup: this.rForm
     }
-    this.filterManagerService.setFilter('unitText', unitTextObject)
+    this.savefilterManagerService.setFilter('unitText', unitTextObject)
 
    searchText$.subscribe (
-      searchText => this.resultSearchTextField$.emit({type: 'inputText', keyApi: 'name', filterName: 'name', newValue:searchText})
+      //searchText => this.resultSearchTextField$.emit({type: 'inputText', keyApi: 'name', filterName: 'name', newValue:searchText})
+      
+      searchText => {
+       return this.filterManagerService.globaleFilter(
+         {type: 'inputText', keyApi: 'name', filterName: 'name', newValue: searchText}, 
+         this.unitsListService.filterListActivated$
+         )
+      } 
    )
   }
 }
