@@ -36,7 +36,8 @@ module.exports = {
           bgYellow: '#F6D788',
           bgDarkYellow: '#FEB805',
           bgRed: '#FF8787',
-          bgDarkRed: '#FE2E2E'
+          bgDarkRed: '#FE2E2E',
+          lightBlue: '#5B76AA'
         },
 
         gridTemplateRows: {
@@ -84,7 +85,16 @@ module.exports = {
        '2xl': '1rem',
        'full': '9999px',
        'large': '12px',
-      }
+      },
+
+      minWidth: {
+        '0': '0',
+        '26': '104px',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
+       }
     },
     variants: {
       extend: {

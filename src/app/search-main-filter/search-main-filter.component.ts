@@ -1,13 +1,17 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges} from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 
 @Component({
-  selector: 'app-search-base-filter',
-  templateUrl: './search-base-filter.component.html',
-  styleUrls: ['./search-base-filter.component.scss']
+  selector: 'app-search-main-filter',
+  templateUrl: './search-main-filter.component.html',
+  styleUrls: ['./search-main-filter.component.scss']
 })
-export class SearchBaseFilterComponent implements OnInit {
+export class SearchMainFilterComponent implements OnInit, OnChanges {
+
+  @Input() currentFilterSelected: string;
+  filterName: string
+  
   @Input() advancedSearch$: Observable<Array<IUnitsList>>;
   @Input() newResultSearch$: Observable<Array<any>>;
   
@@ -19,6 +23,11 @@ export class SearchBaseFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.filterName = changes.currentFilterSelected.currentValue
   }
 
   filterByOrder = ($event) => {

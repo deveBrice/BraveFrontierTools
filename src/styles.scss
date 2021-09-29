@@ -226,3 +226,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .order-custom .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
   @apply bg-blue-500;
 }
+
+.custom-units-text .mat-form-field {
+  @apply pt-5 pb-0 #{!important};
+}
+
+.tabs-filters-custom .mat-tab-label {
+  @apply text-white /*min-w-26*/ h-6 p-0 #{!important};
+}
+
+.tabs-filters-custom .mat-ink-bar {
+  @apply bg-blue-500 #{!important}; 
+}
+
+.tabs-filters-custom .mat-tab-label-active {
+  @apply text-blue-500 #{!important}; 
+}

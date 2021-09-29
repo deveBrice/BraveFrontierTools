@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MaterialModule } from '../../shared/material-module/material.module';
 
-import { SearchBaseFilterComponent } from './search-base-filter.component';
+import { SearchMainFilterComponent } from './search-main-filter.component';
 import { LevelSearchComponent } from './level-search/level-search.component';
 import { ElementsSearchComponent } from './elements-search/elements-search.component';
 import { SpecialAttackSearchComponent } from './special-attack-search/special-attack-search.component';
@@ -17,7 +17,7 @@ import { FilterManagerService } from '../../service/filterManager.service';
 
 @NgModule({
   declarations: [
-    SearchBaseFilterComponent,
+    SearchMainFilterComponent,
     LevelSearchComponent,
     ElementsSearchComponent,
     SpecialAttackSearchComponent,
@@ -31,7 +31,7 @@ import { FilterManagerService } from '../../service/filterManager.service';
     ReactiveFormsModule
   ],
   providers: [UnitsListService, SaveFilterManagerService, LoadingDataManagerService, FilterManagerService],
-  bootstrap: [SearchBaseFilterComponent],
-  exports:[SearchBaseFilterComponent, LevelSearchComponent, ElementsSearchComponent]
+  bootstrap: [SearchMainFilterComponent],
+  exports:[SearchMainFilterComponent, LevelSearchComponent, ElementsSearchComponent]
 })
-export class AdvancedSearchModule { }
+export class SearchMainFilterComponentModule { }

@@ -22,6 +22,8 @@ export class UnitsListComponent implements OnInit {
    chain:string = '';
    unitsListArray = [];
 
+   currentFilterSelected: string;
+
    
   constructor(private unitsListService: UnitsListService, 
               private loadingDataManagerService: LoadingDataManagerService,
@@ -37,9 +39,11 @@ export class UnitsListComponent implements OnInit {
     this.unitsList$ = this.unitsListService.unitsList$;
   }
 
-
-
   onScroll = () => {
     this.loadingDataManagerService.loadMore()
+  }
+
+  getSelection = ($event) => {
+    this.currentFilterSelected = $event;
   }
 }

@@ -1,0 +1,5 @@
+<div class="h-6 bg-blackCardUnit tabs-filters-custom">
+    <mat-tab-group animationDuration="0ms" class="text-white" (selectedTabChange)="filterSelected($event)"  [selectedIndex]="selectedIndex">
+        <mat-tab *ngFor="let f of filters | async" label="{{f.name}}"></mat-tab>
+      </mat-tab-group>
+</div>
