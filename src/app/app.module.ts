@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material-module/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { AdvancedSearchModule } from './search-base-filter/search-base-filter.module';
+import { SearchMainFilterComponentModule } from './search-main-filter/search-main-filter.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { UnitsListService } from '../service/unitsList.service';
 import { UnitDetailsService } from '../service/unitDetails.service';
 
 import { DisplayPictureDirective } from './unitsList/display-picture.directive';
+import { TabsFiltersComponent } from './tabs-filters/tabs-filters.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DisplayPictureDirective } from './unitsList/display-picture.directive';
     DisplayPictureDirective,
     SearchBarComponent,
     UnitsDetailsComponent,
-    ScrollLoaderDataDirective
+    ScrollLoaderDataDirective,
+    TabsFiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { DisplayPictureDirective } from './unitsList/display-picture.directive';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    AdvancedSearchModule,
+    SearchMainFilterComponentModule,
     InfiniteScrollModule
   ],
   providers: [UnitsListService, UnitDetailsService],

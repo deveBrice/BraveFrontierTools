@@ -1,12 +1,14 @@
 
 <div class="h-auto">
-  <div class="pt-5 flex justify-center md:justify-start ml-2">
+  <div>
     <app-search-bar></app-search-bar>
   </div>
+  <app-tabs-filters (sendSelection)="getSelection($event)"></app-tabs-filters> 
   <div class="flex flex-col lg:flex-row">
  
     <div>
-      <app-search-base-filter></app-search-base-filter> 
+      <app-search-main-filter [currentFilterSelected]="currentFilterSelected"></app-search-main-filter>
+      
     </div>
 
 
