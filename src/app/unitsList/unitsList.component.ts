@@ -3,7 +3,7 @@ import { Observable, BehaviorSubject} from 'rxjs';
 import { UnitsListService } from '../../service/unitsList.service';
 import { IUnitsList } from '../../interface/unitsList/iUnitsList.interface';
 import { LoadingDataManagerService } from 'src/service/loadingDataManager.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-units-list',
@@ -27,7 +27,7 @@ export class UnitsListComponent implements OnInit {
    
   constructor(private unitsListService: UnitsListService, 
               private loadingDataManagerService: LoadingDataManagerService,
-              ) {
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -45,5 +45,9 @@ export class UnitsListComponent implements OnInit {
 
   getSelection = ($event) => {
     this.currentFilterSelected = $event;
+  }
+
+  selectedUnit = (unitsList: any) => {
+    this.router.navigate(["/units-details", unitsList.id, unitsList.name.replace(" ", "-")])
   }
 }

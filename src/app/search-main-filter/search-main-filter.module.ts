@@ -14,6 +14,7 @@ import { UnitsListService } from '../../service/unitsList.service';
 import { SaveFilterManagerService } from '../../service/saveFilterManager.service';
 import { LoadingDataManagerService } from '../../service/loadingDataManager.service';
 import { FilterManagerService } from '../../service/filterManager.service';
+import { GenderFilterComponent } from './gender-filter/gender-filter.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilterManagerService } from '../../service/filterManager.service';
     LevelSearchComponent,
     ElementsSearchComponent,
     SpecialAttackSearchComponent,
-    OrderSearchComponent
+    OrderSearchComponent,
+    GenderFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,6 @@ import { FilterManagerService } from '../../service/filterManager.service';
   ],
   providers: [UnitsListService, SaveFilterManagerService, LoadingDataManagerService, FilterManagerService],
   bootstrap: [SearchMainFilterComponent],
-  exports:[SearchMainFilterComponent, LevelSearchComponent, ElementsSearchComponent]
+  exports:[SearchMainFilterComponent]
 })
 export class SearchMainFilterComponentModule { }

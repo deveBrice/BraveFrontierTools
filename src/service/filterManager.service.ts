@@ -18,6 +18,7 @@ export class FilterManagerService {
     obj = {}
     chain:string = '';
     unitsListArray = [];
+    count: number = 0;
 
     constructor(private unitDetailsService: UnitDetailsService, 
                 private unitsListService: UnitsListService,
@@ -79,9 +80,9 @@ export class FilterManagerService {
 
 
  
-  let unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$).pipe(
+  let unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$, filterListActivated$).pipe(
       
-    map(([initialUnitsList, removeFilter, unitDetails]) => 
+    map(([initialUnitsList, removeFilter, unitDetails, filterListActivated]) => 
     
     initialUnitsList.filter (
       init => {
@@ -92,53 +93,52 @@ export class FilterManagerService {
         }
 
          for(let rf in removeFilter) {
-          let checkboxFilter = false;
-          let searchUnitName = false;
-          let searchUnitDetails = false;
-          let alphabetical = false;
-          let numero = false;
-          
-      
+        
+          let resultFilter = false;
+
           if(Array.isArray(removeFilter[rf])) {
-             if(removeFilter[rf].includes(init[rf])){
-                checkboxFilter = true;
-             } 
+            
+              resultFilter = removeFilter[rf].includes(init[rf]);
           } 
 
-          
+        
           if(rf === 'name') {
-            searchUnitName = init[rf].includes(removeFilter[rf])
-            
+            resultFilter = init[rf].includes(removeFilter[rf])
+          }
+
+          if(rf === 'gender') {
+            let genderPicture: any = init[rf]
+            if(removeFilter[rf] !== "allGenders") {
+               //this.loadingDataManagerService.loadMore()
+            resultFilter = genderPicture.picture.substring(30, 30 + removeFilter[rf].length).includes(removeFilter[rf])
+            } else {
+               delete removeFilter['gender']
+            }     
           }
           
             if(rf === 'specialsAttacks' && unitDetails[init.id] !== undefined) {
               for(let details in unitDetails[init.id][rf]) {
-                 if(removeFilter[rf].includes(details)) {
-                        this.loadingDataManagerService.loadMore()
-                        searchUnitDetails = true;
-                    }
+                    this.loadingDataManagerService.loadMore()
+                    resultFilter = removeFilter[rf].includes(details)
+                    
                 }
             }
              
            
-              if(removeFilter[rf] === "name") {
-                  alphabetical = true
+              if(removeFilter[rf] === "name" || removeFilter[rf] === "numUnit") {
+                
+                  resultFilter = true;
               }
 
-   
-          
-              if(removeFilter[rf] === "numUnit") {
-                  numero = true
-               }
         
-           if(checkboxFilter === false && searchUnitName === false && searchUnitDetails === false && alphabetical === false && numero === false) {
-      
+           if(resultFilter === false) {
+ 
               return false
             
            }
 
          }
-       
+     
         return true
          
       })) 

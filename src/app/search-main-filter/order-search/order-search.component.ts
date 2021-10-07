@@ -43,10 +43,9 @@ export class OrderSearchComponent implements OnInit {
     }
     
     
-    const order = this.saveFilterManagerService.setSaveFilterList('orderForm', orderFormObject)
+  const order = this.saveFilterManagerService.setSaveFilterList('orderForm', orderFormObject)
     if(order !== 'saved') {
      this.orderForm = order.formGroup
-     
     }
   }
 

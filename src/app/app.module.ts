@@ -23,6 +23,7 @@ import { UnitDetailsService } from '../service/unitDetails.service';
 import { DisplayPictureDirective } from './unitsList/display-picture.directive';
 import { TabsFiltersComponent } from './tabs-filters/tabs-filters.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

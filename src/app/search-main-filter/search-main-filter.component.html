@@ -7,6 +7,9 @@
     <div class="h-auto">
         <app-order-search (filterByOrder)="filterByOrder($event)"></app-order-search>
     </div>
+    <div class="h-auto">
+        <app-gender-filter></app-gender-filter>
+    </div>
     <div class="h-auto mb-2">
         <app-level-search [levelsearch$]="advancedSearch$" (levelSearchResult$)="levelSearchResultEvent($event)" [newSearch$]="newResultSearch$"></app-level-search>
     </div>
