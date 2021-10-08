@@ -15,6 +15,7 @@ import { SaveFilterManagerService } from '../../service/saveFilterManager.servic
 import { LoadingDataManagerService } from '../../service/loadingDataManager.service';
 import { FilterManagerService } from '../../service/filterManager.service';
 import { GenderFilterComponent } from './gender-filter/gender-filter.component';
+import { DirectionFilterComponent } from './direction-filter/direction-filter.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GenderFilterComponent } from './gender-filter/gender-filter.component';
     ElementsSearchComponent,
     SpecialAttackSearchComponent,
     OrderSearchComponent,
-    GenderFilterComponent
+    GenderFilterComponent,
+    DirectionFilterComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ import { DisplayPictureDirective } from './unitsList/display-picture.directive';
 import { TabsFiltersComponent } from './tabs-filters/tabs-filters.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
