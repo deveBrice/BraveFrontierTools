@@ -19,6 +19,7 @@ export class FilterManagerService {
     chain:string = '';
     unitsListArray = [];
     count: number = 0;
+    text: string = '';
 
     constructor(private unitDetailsService: UnitDetailsService, 
                 private unitsListService: UnitsListService,
@@ -68,7 +69,6 @@ export class FilterManagerService {
    );
 
 
-
    const unitDetails$ = this.unitDetailsService.getUnitDetails().pipe (
     map(res => {
      res.filter(a => {
@@ -78,8 +78,6 @@ export class FilterManagerService {
     })
   )
 
-
- 
   let unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$, filterListActivated$).pipe(
       
     map(([initialUnitsList, removeFilter, unitDetails, filterListActivated]) => 
@@ -130,6 +128,10 @@ export class FilterManagerService {
                   resultFilter = true;
               }
 
+              if(rf === "direction") {
+                resultFilter = true;
+              }
+
         
            if(resultFilter === false) {
  
@@ -148,6 +150,7 @@ export class FilterManagerService {
     map(([unitsFilter, removeFilter]) => {
         for(let rf in removeFilter) {
           if(removeFilter[rf] === "name") {
+             this.text = 'alphabetique';
              unitsFilter.sort(function(a, b) {
                return a.name.localeCompare(b.name)
              })
@@ -163,10 +166,36 @@ export class FilterManagerService {
     map(([unitsFilter, removeFilter]) => {
         for(let rf in removeFilter) {
           if(removeFilter[rf] === "numUnit") {
+            this.text = '';
              unitsFilter.sort(function(a, b) {
                return a.numUnit - b.numUnit
              })
           }
+        }
+        return unitsFilter;
+      } 
+    )
+  )
+
+  unitsFilter$ = combineLatest(unitsFilter$, removeFilter$).pipe(
+    map(([unitsFilter, removeFilter]) => {
+        for(let rf in removeFilter) {
+          if(removeFilter[rf] === "descending") {
+             unitsFilter.reverse(function(a, b) {
+               return a.id - b.id
+             })
+          }
+          if(removeFilter[rf] === "ascending" && this.text ==='') {
+            unitsFilter.sort(function(c, d) {
+              return c.id - d.id
+            })
+         }
+
+         if(removeFilter[rf] === "ascending" && this.text !=='') {
+          unitsFilter.sort(function(c, d) {
+            return c.title > d.title ? -1 : 1;
+          })
+       }
         }
         return unitsFilter;
       } 

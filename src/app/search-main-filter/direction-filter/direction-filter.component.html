@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Sens</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{directionDropDown.chevronName}}</mat-icon>
+        </div>
+    </div>
+    <div *ngIf="directionDropDown.state">
+        <form [formGroup]="directionForm" class="mt-3 ml-1 direction-custom">
+            <mat-radio-group formControlName="direction" class="ml-1 mb-3 flex flex-col text-white text-lg" (change)="directionChange($event)">
+                <mat-radio-button class="mb-3" value="ascending">Croissante</mat-radio-button>
+                <mat-radio-button class="mb-3" value="descending">Décroissante</mat-radio-button>
+            </mat-radio-group>
+        </form>
+   </div>
+</div>

@@ -242,3 +242,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .tabs-filters-custom .mat-tab-label-active {
   @apply text-blue-500 #{!important}; 
 }
+
+.direction-custom .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  @apply border-gray-500;
+}
+
+.direction-custom .mat-radio-button.mat-accent .mat-radio-inner-circle{
+  @apply text-gray-500;
+  @apply bg-gray-500;
+}
+
+.direction-custom .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  @apply bg-gray-500;
+}
