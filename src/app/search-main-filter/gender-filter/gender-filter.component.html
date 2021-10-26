@@ -1,20 +1,19 @@
-<div class="mt-4">
+<div>
     <div class="flex justify-between items-center mr-2">
         <div class="">
             <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Genre</h2>
         </div>
         <div class="border-2 text-white w-7 h-7 rounded-full">
-            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{orderDropDown.chevronName}}</mat-icon>
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{genderDropDown.chevronName}}</mat-icon>
         </div>
     </div>
-    <div *ngIf="orderDropDown.state">
-        <form [formGroup]="genderForm" class="mt-3 ml-1">
-            <mat-radio-group formControlName="gender" class="ml-1 mb-3 flex flex-col text-white text-lg" (change)="genderChange($event)">
-                <mat-radio-button class="mb-3" value="male">Mâle</mat-radio-button>
-                <mat-radio-button class="mb-3" value="female">Femelle</mat-radio-button>
-                <mat-radio-button class="mb-3" value="genderless">Sans genre</mat-radio-button>
-                <mat-radio-button value="allGenders">Tous genres</mat-radio-button>
-            </mat-radio-group>
-        </form>
-   </div>
+    <div class="flex flex-col" *ngIf="genderDropDown.state">
+        <div *ngFor="let ga of gendersArray" class="checkbox-custom-gender check {{ga.genderPicture}}">
+            <mat-checkbox class="ml-1 mt-4" [(ngModel)]="ga.state" (change)="selectedGender($event)"> 
+                <span class="text-white !mb-0 ml-2 text-lg"> {{ga.name}}</span>  
+            </mat-checkbox>
+       </div>
+    </div>
 </div>
+
+<!--#9B8444-->

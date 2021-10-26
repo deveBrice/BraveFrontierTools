@@ -13,7 +13,9 @@ import { UnitsListService } from '../../../service/unitsList.service';
 export class GenderFilterComponent implements OnInit {
   
   genderForm: FormGroup;
-  orderDropDown = {chevronName: "expand_less", state: true};
+  genderDropDown = {chevronName: "expand_less", state: true};
+  gendersArray: any[] = [];
+  gendersSearchResult: any[] = [];
 
   constructor(
       private fb: FormBuilder, 
@@ -26,37 +28,82 @@ export class GenderFilterComponent implements OnInit {
     this.displayGenderFilter()
   }
 
+  genderList: any[] = [
+    {name: 'male', state: false, genderPicture: 'checkbox-custom-male'},
+    {name: 'femelle', state: false, genderPicture: 'checkbox-custom-female'},
+    {name: 'sans genre', state: false, genderPicture: 'checkbox-custom-genderLess'},
+  ] 
+
   displayGenderFilter = () => {
-    this.genderForm = this.fb.group({
+    this.gendersArray = this.genderList
+    const genders = this.saveFilterManagerService.getFilter('gender')
+ 
+    if(genders !== undefined) {
+     
+       this.gendersArray = genders.elementArray
+    }
+     return this.genderList;
+
+    
+   /* this.genderForm = this.fb.group({
       gender: ['allGenders', Validators.required]
     })
 
-    let genderFormObject = {
-      formGroup: this.genderForm
-   }
+ 
    
    
- const gender = this.saveFilterManagerService.setSaveFilterList('genderForm', genderFormObject)
+ /*const gender = this.saveFilterManagerService.setSaveFilterList('genderForm', genderFormObject)
    if(gender !== 'saved') {
     this.genderForm = gender.formGroup
-   }
+   }*/
  }
 
- genderChange = (genderName: any) => {
+ selectedGender = () => {
+  this.gendersArray.reduce((gendersList: any[], gendersObject: any) => {
+    if(gendersObject.state) {
+      gendersList.push(gendersObject.name);
+
+      this.gendersSearchResult = gendersList   
+    }
+
+    return gendersList;
+   }, [])
+
     this.filterManagerService.globaleFilter(
-    {from: 'unitList', type: 'radio', keyApi: genderName.value, filterName: 'gender', newValue: genderName.value}, 
+      
+    {from: 'unitList', type: 'checkbox', keyApi: 'gender', filterName: 'gender', newValue: this.gendersSearchResult}, 
     this.unitsListService.filterListActivated$
     )
+    
+    this.genderStateElement(this.gendersArray)
+
+    let genderObject = {
+      gendersArray: this.gendersArray
+   }
+
+   this.saveFilterManagerService.setFilter('gender', genderObject)
+}
+
+ // checked if all the value with state are false
+ genderStateElement = (arrayList: any[]) => {
+  let checker = arr => arr.every(v => v.state === false);
+
+  let checkerResult = checker(arrayList)
+
+  if(checkerResult === true) {
+    this.saveFilterManagerService.removeFilter('gender');
+   return this.filterManagerService.globaleFilter({from: 'unitsList', type: 'checkbox', keyApi: 'gender', filterName: 'gender', newValue: []}, this.unitsListService.filterListActivated$)
+  }
 }
   
 
   dropDown = () => {
-    this.orderDropDown.state =! this.orderDropDown.state
+    this.genderDropDown.state =! this.genderDropDown.state
     
-    if(this.orderDropDown.state === false) {
-      this.orderDropDown.chevronName = "expand_more";
+    if(this.genderDropDown.state === false) {
+      this.genderDropDown.chevronName = "expand_more";
     } else {
-      this.orderDropDown.chevronName = "expand_less";
+      this.genderDropDown.chevronName = "expand_less";
     }
   }
 

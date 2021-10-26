@@ -95,7 +95,7 @@ export class FilterManagerService {
           let resultFilter = false;
 
           if(Array.isArray(removeFilter[rf])) {
-            
+       
               resultFilter = removeFilter[rf].includes(init[rf]);
           } 
 
@@ -105,13 +105,8 @@ export class FilterManagerService {
           }
 
           if(rf === 'gender') {
-            let genderPicture: any = init[rf]
-            if(removeFilter[rf] !== "allGenders") {
-               //this.loadingDataManagerService.loadMore()
-            resultFilter = genderPicture.picture.substring(30, 30 + removeFilter[rf].length).includes(removeFilter[rf])
-            } else {
-               delete removeFilter['gender']
-            }     
+            const genderName = init[rf]['alt'].substring(5).replace(' ', '')
+            resultFilter = removeFilter[rf].includes(genderName);  
           }
           
             if(rf === 'specialsAttacks' && unitDetails[init.id] !== undefined) {

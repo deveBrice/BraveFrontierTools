@@ -61,6 +61,7 @@ elementsArray: any[] = [];
 
      return elementsList;
     }, [])
+    
     this.filterManagerService.globaleFilter(
     {from: 'unitsList', type: 'checkbox', keyApi: 'element', filterName: 'element', newValue: this.elementsSearchResult}, 
     this.unitsListService.filterListActivated$
