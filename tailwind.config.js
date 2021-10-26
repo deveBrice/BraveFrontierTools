@@ -37,7 +37,8 @@ module.exports = {
           bgDarkYellow: '#FEB805',
           bgRed: '#FF8787',
           bgDarkRed: '#FE2E2E',
-          lightBlue: '#5B76AA'
+          lightBlue: '#5B76AA',
+          gold: '#9B8444'
         },
 
         gridTemplateRows: {
@@ -48,6 +49,10 @@ module.exports = {
          '16': 'repeat(10, calc(15% * 1))',
         },
         spacing: {
+          '4.5': '1.125rem',
+          '5.5': '1.375rem',
+          '15': '3.75rem',
+          '17': '4.25rem',
           '74': '18.5rem',
           '76': '19rem',
           '77': '19.25rem',
@@ -63,6 +68,24 @@ module.exports = {
           '480': '100rem',
           '1000': '250rem',
         },
+        width: {
+          '1/7': '14.2857143%',
+          '2/7': '28.5714286%',
+          '3/7': '42.8571429%',
+          '4/7': '57.1428571%',
+          '5/7': '71.4285714%',
+          '6/7': '85.7142857%',
+          '9/10':'90%',
+        },
+        height: {
+          '1/7': '14.2857143%',
+          '2/7': '28.5714286%',
+          '3/7': '42.8571429%',
+          '4/7': '57.1428571%',
+          '5/7': '71.4285714%',
+          '6/7': '85.7142857%',
+          '9/10':'90%',
+        },
 
         backgroundImage: {
           'fire-picture': "url('assets/imgs/unitsList/elements/fire.png')",
@@ -71,9 +94,11 @@ module.exports = {
           'thunder-picture': "url('assets/imgs/unitsList/elements/thunder.png')",
           'light-picture': "url('assets/imgs/unitsList/elements/light.png')",
           'dark-picture': "url('assets/imgs/unitsList/elements/dark.png')",
+          'male-picture': "url('assets/imgs/unitsList/genders/male.png')",
+          'female-picture': "url('assets/imgs/unitsList/genders/female.png')",
+          'genderLess-picture': "url('assets/imgs/unitsList/genders/genderless.png')",
         },
       },
-
       borderRadius: {
       'none': '0',
        'sm': '0.125rem',
@@ -86,7 +111,6 @@ module.exports = {
        'full': '9999px',
        'large': '12px',
       },
-
       minWidth: {
         '0': '0',
         '26': '104px',
@@ -94,7 +118,33 @@ module.exports = {
         '1/2': '50%',
         '3/4': '75%',
         'full': '100%',
-       }
+       },
+       rotate: {
+        '-180': '-180deg',
+         '-90': '-90deg',
+         '-60': '-60deg',
+        '-45': '-45deg',
+         '0': '0',
+         '10': '10deg',
+         '20': '20deg',
+         '30': '30deg',
+         '45': '45deg',
+         '60': '60deg',
+         '90': '90deg',
+        '135': '135deg',
+         '180': '180deg',
+        '270': '270deg',
+       },
+       backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50%': '50%',
+        '16': '4rem',
+        '4' : '1rem',
+        '5' : '1.25rem',
+        '6' : '1.5rem',
+      }
     },
     variants: {
       extend: {
@@ -105,6 +155,7 @@ module.exports = {
         borderRadius: ['hover', 'focus', 'important'],
         backgroundImage: ['hover', 'focus', 'important'],
         display: ['hover', 'focus'],
+        transform: ['hover', 'focus'],
       },
     },
     plugins: [

@@ -7,7 +7,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -83,7 +83,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -159,7 +159,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -235,7 +235,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -311,7 +311,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -387,7 +387,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -463,7 +463,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -539,7 +539,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -615,7 +615,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -691,7 +691,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -767,7 +767,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -843,7 +843,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -919,7 +919,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -995,7 +995,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -1071,7 +1071,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -1147,7 +1147,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -1223,7 +1223,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -1299,7 +1299,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -1375,7 +1375,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -1451,7 +1451,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -1527,7 +1527,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -1603,7 +1603,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -1679,7 +1679,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -1755,7 +1755,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -1831,7 +1831,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -1899,7 +1899,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -1967,7 +1967,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -2035,7 +2035,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -2103,7 +2103,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -2171,7 +2171,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -2239,7 +2239,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -2307,7 +2307,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -2375,7 +2375,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -2443,7 +2443,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -2511,7 +2511,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -2579,7 +2579,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -2647,7 +2647,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -2715,7 +2715,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -2783,7 +2783,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -2851,7 +2851,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -2923,7 +2923,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -2995,7 +2995,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/male.png",
-      "alt": "Male picture"
+      "alt": "Image male"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -3067,7 +3067,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -3127,7 +3127,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -3187,7 +3187,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -3247,7 +3247,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -3307,7 +3307,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -3367,7 +3367,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -3427,7 +3427,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -3487,7 +3487,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -3547,7 +3547,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -3607,7 +3607,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -3667,7 +3667,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -3727,7 +3727,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "None picture"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -3787,7 +3787,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -3847,7 +3847,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -3907,7 +3907,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "Female picture"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -3967,7 +3967,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -4027,7 +4027,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -4087,7 +4087,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -4147,7 +4147,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -4207,7 +4207,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -4267,7 +4267,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -4327,7 +4327,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -4387,7 +4387,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -4507,7 +4507,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -4567,7 +4567,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -4627,7 +4627,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -4687,7 +4687,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -4747,7 +4747,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -4807,7 +4807,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -4867,7 +4867,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -4927,7 +4927,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -4987,7 +4987,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -5047,7 +5047,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -5107,7 +5107,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -5167,7 +5167,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -5707,7 +5707,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -5767,7 +5767,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -5827,7 +5827,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -5887,7 +5887,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -5947,7 +5947,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -6007,7 +6007,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -6067,7 +6067,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -6127,7 +6127,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -6187,7 +6187,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -6247,7 +6247,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -6307,7 +6307,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -6367,7 +6367,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -6427,7 +6427,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -6487,7 +6487,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -6547,7 +6547,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -6607,7 +6607,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -6667,7 +6667,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -6727,7 +6727,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -6787,7 +6787,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -6847,7 +6847,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -6907,7 +6907,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -6967,7 +6967,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -7027,7 +7027,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -7087,7 +7087,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -7147,7 +7147,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -7211,7 +7211,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -7275,7 +7275,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -7339,7 +7339,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -7403,7 +7403,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -7467,7 +7467,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -7531,7 +7531,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -7595,7 +7595,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -7659,7 +7659,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -7723,7 +7723,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -8171,7 +8171,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -8235,7 +8235,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -8699,7 +8699,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -8767,7 +8767,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -8835,7 +8835,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -8903,7 +8903,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -8967,7 +8967,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -9031,7 +9031,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -9095,7 +9095,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -9163,7 +9163,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -9231,7 +9231,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -9299,7 +9299,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -9363,7 +9363,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -9427,7 +9427,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -9491,7 +9491,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -9559,7 +9559,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -9627,7 +9627,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -9887,7 +9887,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -9959,7 +9959,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -10031,7 +10031,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -10499,7 +10499,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -10563,7 +10563,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -10627,7 +10627,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -10895,7 +10895,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -10967,7 +10967,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -11039,7 +11039,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/female.png",
-      "alt": "image femelle"
+      "alt": "Image femelle"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -11111,7 +11111,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -11158,7 +11158,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -11205,7 +11205,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -11252,7 +11252,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -11299,7 +11299,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -11346,7 +11346,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -11393,7 +11393,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -11440,7 +11440,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -11487,7 +11487,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -11534,7 +11534,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -11581,7 +11581,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -11628,7 +11628,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -11675,7 +11675,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -11722,7 +11722,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -11769,7 +11769,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -11816,7 +11816,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -11863,7 +11863,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -11910,7 +11910,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -11957,7 +11957,7 @@
     "element": "Feu",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/fire.png",
@@ -12004,7 +12004,7 @@
     "element": "Eau",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/water.png",
@@ -12051,7 +12051,7 @@
     "element": "Terre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/earth.png",
@@ -12098,7 +12098,7 @@
     "element": "Foudre",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/thunder.png",
@@ -12145,7 +12145,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -12192,7 +12192,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -12239,7 +12239,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -12286,7 +12286,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -12333,7 +12333,7 @@
     "element": "Lumière",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/light.png",
@@ -12380,7 +12380,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -12444,7 +12444,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",
@@ -12508,7 +12508,7 @@
     "element": "Ténèbres",
     "gender": {
       "picture": "assets/imgs/unitsList/genders/genderless.png",
-      "alt": "image sans genre"
+      "alt": "Image sans genre"
     },
     "elementPicture": {
       "picture": "assets/imgs/unitsList/elements/dark.png",

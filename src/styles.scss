@@ -255,3 +255,69 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .direction-custom .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
   @apply bg-gray-500;
 }
+
+
+
+.checkbox-custom-gender {
+  .mat-checkbox-background,
+  .mat-checkbox-frame {
+    @apply w-5 h-3 border-gold absolute -top-1 left-1
+    transform rotate-30 border-b-0 border-t-0
+  }
+}
+
+.checkbox-custom-gender {
+  .mat-checkbox-background,
+  .mat-checkbox-frame:before {
+    content: '';
+    width: 120%;
+    @apply h-9/10 border-2 border-gold absolute top-0 -left-0.5
+    transform -rotate-60 border-t-0 border-b-0
+  }
+}
+.checkbox-custom-gender {
+  .mat-checkbox-background,
+  .mat-checkbox-frame:after {
+    content: '';
+    width: 120%;
+    @apply h-6/7 border-2 border-gold absolute top-0 -left-0.5
+    transform rotate-60 border-t-0 border-b-0
+  }
+}
+
+.check .mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate {  
+  @apply bg-transparent border-2 border-transparent
+}
+
+.check .mat-checkbox-checkmark {
+  display: none;
+}
+
+.check .mat-checkbox-inner-container {
+  height: 0;
+}
+
+.check .mat-ripple-element {
+  @apply absolute left-1 bg-gold #{!important}; 
+}
+
+
+.checkbox-custom-male .mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate {  
+  @apply w-6 h-6 bg-5 bg-male-picture bg-no-repeat border-2 border-transparent absolute -top-2.5 left-0.5
+  transform rotate-0
+}
+
+.checkbox-custom-female .mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate {  
+  @apply w-6 h-6 bg-5 bg-female-picture bg-no-repeat border-2 border-transparent absolute -top-2.5 left-0.5
+  transform rotate-0
+}
+
+.checkbox-custom-genderLess .mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate {  
+  @apply w-6 h-6 bg-5 bg-genderLess-picture bg-no-repeat border-2 border-transparent absolute -top-2.5 left-0.5
+  transform rotate-0
+}
+
