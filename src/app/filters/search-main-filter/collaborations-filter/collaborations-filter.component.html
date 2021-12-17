@@ -1,0 +1,17 @@
+<div>
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Collaborations</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{collaborationDropDown.chevronName}}</mat-icon>
+        </div>
+    </div>
+    <div class="flex flex-col" *ngIf="collaborationDropDown.state">
+        <div *ngFor="let c of collaborationArray" class="checkbox-custom-collaboration {{c.genderPicture}}">
+            <mat-checkbox class="ml-1 mt-4" [(ngModel)]="c.state" (change)="selectedCollaboration($event)"> 
+                <span class="text-white !mb-0 ml-2 text-lg"> {{c.name}}</span>  
+            </mat-checkbox>
+       </div>
+    </div>
+</div>
