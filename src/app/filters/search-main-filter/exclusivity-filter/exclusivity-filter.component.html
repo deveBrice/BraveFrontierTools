@@ -1,0 +1,18 @@
+<div>
+    <div class="flex justify-between items-center mr-2">
+        <div class="">
+            <h2 class="text-white !m-0 pl-3 pt-3 pb-2">Exclusivités</h2>
+        </div>
+        <div class="border-2 text-white w-7 h-7 rounded-full">
+            <mat-icon class="text-white cursor-pointer" (click)="dropDown()">{{exclusivityDropDown.chevronName}}</mat-icon>
+        </div>
+    </div>
+    <div class="flex flex-col" *ngIf="exclusivityDropDown.state">
+        <div *ngFor="let ea of exclusivityArray" class="checkbox-custom-exclusivity {{ea.genderPicture}}">
+            <mat-checkbox class="ml-1 mt-4" [(ngModel)]="ea.state" (change)="selectedExclusivity($event)"> 
+                <span class="text-white !mb-0 ml-2 text-lg"> {{ea.name}}</span>  
+            </mat-checkbox>
+       </div>
+    </div>
+</div>
+

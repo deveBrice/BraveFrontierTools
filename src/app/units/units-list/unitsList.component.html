@@ -1,0 +1,92 @@
+<div class="h-auto">
+  <div>
+    <app-search-bar></app-search-bar>
+  </div>
+    <app-tabs-filters (sendSelection)="getSelection($event)"></app-tabs-filters> 
+  <div class="flex flex-col lg:flex-row">
+    <div>
+      <app-search-main-filter [currentFilterSelected]="currentFilterSelected"></app-search-main-filter>
+    </div>
+
+
+<div class="h-full flex flex-wrap justify-center md:justify-start" infiniteScroll
+[infiniteScrollDistance]="0.1"
+(scrolled)="onScroll()">
+  <ng-template ngFor let-unitsList [ngForOf]="unitsList$ | async" let-i="index"> 
+ 
+   <mat-card class="h-117 w-77 bg-blackCardUnit m-2 cursor-pointer" (click)="selectedUnit(unitsList)">
+     <mat-card-header class="w-full flex justify-center">
+      <div class="w-60 flex justify-between">
+        <div class="h-6 w-6">
+          <img class="h-6 w-6" [src]="unitsList.gender.picture" [alt]="unitsList.gender.alt">
+        </div>
+        <div class="flex flex-col">
+          <mat-card-title class="text-xl font-bold text-{{unitsList.color}}" [ngStyle]="{'color': unitsList.color}">{{unitsList.name}}</mat-card-title>
+          <mat-card-title class="text-xl text-stars text-center">{{unitsList.level}}</mat-card-title>
+         </div>
+
+        <div class="h-6 w-6">
+          <img class="h-6 w-6" [src]="unitsList.elementPicture.picture" [alt]="unitsList.elementPicture.alt">
+        </div>
+      </div>
+    </mat-card-header>
+     <div class="flex justify-between">
+       <img class="ml-4" (mouseenter) ="hoveredDungeonPicture = i"  (mouseleave)="hoveredDungeonPicture = null" [src]="fixedPicture.swordIcon" [alt]="fixedPicture.altSwordIcon">
+       <img class="mr-4" (mouseenter) ="hovereArenaPicture = i"  (mouseleave)="hovereArenaPicture = null" [src]="fixedPicture.doubleSwordIcon" [alt]="fixedPicture.altDoubleSwordIcon">
+     </div>
+     <div *ngIf="hoveredDungeonPicture === i" class="relative">
+       <div class="absolute">
+         <div *ngFor="let field of unitsList.fields">
+          <img class="h-48 w-72" [src]="fixedPicture.dungeonField" [alt]="fixedPicture.altDungeonField">
+         </div>
+       </div>
+       <div class="absolute right-16 top-10">
+        <div *ngFor="let animeBattle of unitsList.animationBattle">
+          <img [src]="animeBattle.normalAttack" [alt]="animeBattle.altNormalAttack">
+        </div>
+      </div>
+     </div>
+     <div *ngIf="hovereArenaPicture === i" class="relative">
+      <div class="absolute">
+        <div *ngFor="let field of unitsList.fields">
+         <img class="h-48 w-72" [src]="fixedPicture.arenaField" [alt]="fixedPicture.altArenaField">
+        </div>
+      </div>
+      <div class="absolute right-16 top-10">
+       <div *ngFor="let animeBattle of unitsList.animationBattle">
+         <img [src]="animeBattle.combatMode" [alt]="animeBattle.altCombatMode">
+       </div>
+     </div>
+    </div>
+    <div class="h-52 w-full flex justify-center">
+      <img class="inline-block h-auto pb-3" [src]="unitsList.unit.picture" [alt]="unitsList.unit.alt">
+   </div>
+   <mat-divider class="bg-white"></mat-divider>
+  <mat-card-content class="w-full">
+      <div class="pt-3">
+         <div class="flex justify-around">
+            <p class="font-bold" [ngStyle]="{'color': unitsList.color}">HP</p>
+            <p class="font-bold" [ngStyle]="{'color': unitsList.color}">ATK</p>
+            <p class="font-bold" [ngStyle]="{'color': unitsList.color}">DEF</p>
+            <p class="font-bold" [ngStyle]="{'color': unitsList.color}">REC</p>
+         </div>
+         <div class="flex justify-around" *ngFor="let stat of unitsList.baseStat">
+           <p class="text-white">{{stat.hp}}</p>
+           <p class="text-white">{{stat.atk}}</p>
+           <p class="text-white">{{stat.def}}</p>
+           <p class="text-white">{{stat.rec}}</p>
+         </div>
+      </div>
+      <mat-divider class="bg-white"></mat-divider>
+      <!--grid-cols-16 grid-rows-10-->
+      <div class="grid grid-cols-7 grid-rows-10 overflow-custom pt-3">
+        <div class="pr-1" *ngFor="let e of unitsList.chainsEvolves; let ce = index">
+          <img [ngClass]="{'border border-{{unitsList.color}}' : unitsList.name === e.alt}" class="h-10 w-10 p-0.5" [src]="e.evolve" [alt]="e.alt" [matTooltip]="e.alt">
+        </div>
+      </div>
+    </mat-card-content>
+   </mat-card>
+  </ng-template>
+ </div>
+</div>
+</div>
