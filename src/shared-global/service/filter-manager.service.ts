@@ -83,9 +83,9 @@ export class FilterManagerService {
 
   let unitsFilter$: Observable<any> = combineLatest(this.initialUnitsList$, removeFilter$, unitDetails$, filterListActivated$).pipe(
       
-    map(([initialUnitsList, removeFilter, unitDetails, filterListActivated]) => 
-    
-    initialUnitsList.filter (
+    map(([initialUnitsList , removeFilter, unitDetails, filterListActivated]) => 
+    [...initialUnitsList].slice(0, 501)
+    .filter (
       init => {
        
         if(Object.keys(removeFilter).length === 0) {
@@ -178,10 +178,10 @@ export class FilterManagerService {
   unitsFilter$ = combineLatest(unitsFilter$, removeFilter$).pipe(
     map(([unitsFilter, removeFilter]) => {
         for(let rf in removeFilter) {
-          if(removeFilter[rf] === "descending") {
+          if(removeFilter[rf] === "descending") {  
              unitsFilter.reverse(function(a, b) {
                return a.id - b.id
-             })
+             })         
           }
           if(removeFilter[rf] === "ascending" && this.text ==='') {
             unitsFilter.sort(function(c, d) {

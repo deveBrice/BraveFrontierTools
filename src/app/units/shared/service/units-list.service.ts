@@ -33,7 +33,9 @@ export class UnitsListService implements OnDestroy {
     subscribeUnitsList = () => {
       this.subscription$ = this.getUnitsList().subscribe(
             unitsList => {
-              const test = this.loadingDataManagerService.dataList(unitsList)
+             const limitData = [...unitsList].slice(0, 501)
+              const test = this.loadingDataManagerService.dataList(limitData)
+              
               return this.behaviorSubjectUpdateUnitsList$.next(test)
             }
         )
